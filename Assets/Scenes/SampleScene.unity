@@ -1674,80 +1674,6 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: (NPC Subtitle)
---- !u!1 &474521736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 125852, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
-  m_PrefabInstance: {fileID: 1812755699}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &474521739 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
-  m_PrefabInstance: {fileID: 1812755699}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474521736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab8b685e62a9aeb4a9472b30ec2d86d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &474521742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474521736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjects:
-  - rid: 3747117322566107160
-  m_CurrentLocale: {fileID: 0}
-  references:
-    version: 2
-    RefIds:
-    - rid: 3747117322566107160
-      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
-      data: {m_Target: {fileID: 474521739}, m_TrackedProperties:
-          items:
-          - rid: 3747117322566107161
-, m_UpdateType: 0, m_Changed:
-          m_PersistentCalls:
-            m_Calls: []
-          m_CallsDirty: 1
-}
-    - rid: 3747117322566107161
-      type: {class: LocalizedAssetProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_Localized:
-          rid: 3747117322566107162
-        m_PropertyPath: displaySettings.localizationSettings.textTable
-    - rid: 3747117322566107162
-      type: {class: LocalizedObject, ns: UnityEngine.Localization, asm: Unity.Localization}
-      data:
-        m_TableReference:
-          m_TableCollectionName: 
-          m_Valid: 0
-          <ReferenceType>k__BackingField: 0
-        m_TableEntryReference:
-          m_KeyId: 0
-          m_Key: 
-          m_Valid: 0
-          <ReferenceType>k__BackingField: 0
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocaleOverride: {fileID: 0}
-        m_CurrentTable:
-          m_TableCollectionName: 
-          m_Valid: 0
-          <ReferenceType>k__BackingField: 0
-        m_CurrentTableEntry:
-          m_KeyId: 0
-          m_Key: 
-          m_Valid: 0
-          <ReferenceType>k__BackingField: 0
 --- !u!224 &475774409 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 22425850, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
@@ -2019,6 +1945,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608030298}
   m_CullTransparentMesh: 0
+--- !u!1 &631155807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 631155809}
+  - component: {fileID: 631155808}
+  m_Layer: 0
+  m_Name: MMParallaxUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &631155808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631155807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2852911d573562f4a836903e5c779c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mode: 0
+  AmplitudeMultiplier: 1.5
+  SpeedMultiplier: 2
+  ParallaxLayers:
+  - Rect: {fileID: 1741181314}
+    Speed: 2
+    Amplitude: 20
+    StartPosition: {x: 0, y: 0}
+    Active: 1
+  - Rect: {fileID: 838445843}
+    Speed: 3
+    Amplitude: 30
+    StartPosition: {x: 0, y: 0}
+    Active: 1
+  - Rect: {fileID: 0}
+    Speed: 4
+    Amplitude: 40
+    StartPosition: {x: 0, y: 0}
+    Active: 1
+  - Rect: {fileID: 0}
+    Speed: 5
+    Amplitude: 50
+    StartPosition: {x: 0, y: 0}
+    Active: 1
+  - Rect: {fileID: 0}
+    Speed: 6
+    Amplitude: 60
+    StartPosition: {x: 0, y: 0}
+    Active: 1
+  - Rect: {fileID: 0}
+    Speed: 7
+    Amplitude: 70
+    StartPosition: {x: 0, y: 0}
+    Active: 1
+  - Rect: {fileID: 0}
+    Speed: 8
+    Amplitude: 80
+    StartPosition: {x: 0, y: 0}
+    Active: 1
+--- !u!4 &631155809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631155807}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 827.13403, y: 782.3055, z: -446.98254}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5177,10 +5186,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 22425850, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1346158021}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 125852, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 474521742}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
 --- !u!1 &1822476466
 GameObject:
@@ -5976,3 +5982,4 @@ SceneRoots:
   - {fileID: 1384384391}
   - {fileID: 1812755699}
   - {fileID: 2121478683}
+  - {fileID: 631155809}
