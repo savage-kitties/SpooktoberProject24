@@ -1690,25 +1690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8b685e62a9aeb4a9472b30ec2d86d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &474521741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474521736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e168378c6dd4b8408a51d7be3b9c422, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_currentLanguagePlayerPrefsKey: Language
-  m_textTable: {fileID: 0}
-  m_additionalTextTables: []
-  m_localizedFonts: {fileID: 0}
-  m_saveLanguageInPlayerPrefs: 1
-  m_alsoUpdateInactiveLocalizeUI: 1
-  m_useDefaultLanguageForBlankTranslations: 1
 --- !u!114 &474521742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,20 +1704,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TrackedObjects:
   - rid: 3747117322566107160
+  m_CurrentLocale: {fileID: 0}
   references:
     version: 2
     RefIds:
     - rid: 3747117322566107160
       type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
-      data:
-        m_Target: {fileID: 474521739}
-        m_TrackedProperties:
+      data: {m_Target: {fileID: 474521739}, m_TrackedProperties:
           items:
           - rid: 3747117322566107161
-        m_UpdateType: 0
-        m_Changed:
+, m_UpdateType: 0, m_Changed:
           m_PersistentCalls:
             m_Calls: []
+          m_CallsDirty: 1
+}
     - rid: 3747117322566107161
       type: {class: LocalizedAssetProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
       data:
@@ -1748,11 +1729,25 @@ MonoBehaviour:
       data:
         m_TableReference:
           m_TableCollectionName: 
+          m_Valid: 0
+          <ReferenceType>k__BackingField: 0
         m_TableEntryReference:
           m_KeyId: 0
           m_Key: 
+          m_Valid: 0
+          <ReferenceType>k__BackingField: 0
         m_FallbackState: 0
         m_WaitForCompletion: 0
+        m_LocaleOverride: {fileID: 0}
+        m_CurrentTable:
+          m_TableCollectionName: 
+          m_Valid: 0
+          <ReferenceType>k__BackingField: 0
+        m_CurrentTableEntry:
+          m_KeyId: 0
+          m_Key: 
+          m_Valid: 0
+          <ReferenceType>k__BackingField: 0
 --- !u!224 &475774409 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 22425850, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
@@ -5162,7 +5157,7 @@ PrefabInstance:
       objectReference: {fileID: 1346158020}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.localizationSettings.language
-      value: English
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.continueButton
@@ -5186,9 +5181,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 125852, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       insertIndex: -1
       addedObject: {fileID: 474521742}
-    - targetCorrespondingSourceObject: {fileID: 125852, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 474521741}
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
 --- !u!1 &1822476466
 GameObject:
