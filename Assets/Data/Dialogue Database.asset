@@ -384,7 +384,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Fade(in, 5); SendMessage(ChangeBackground, 0, GameManager/GameCanvas/Background);
+        value: Fade(in, 5); SendMessage(ChangeBackground, 0, GameCanvas/Background);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -477,7 +477,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("NPC", "2")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -602,7 +602,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: LoadLevel(TownSquareDayScene)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
