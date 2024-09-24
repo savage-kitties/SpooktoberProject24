@@ -3213,6 +3213,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017983352}
   m_CullTransparentMesh: 0
+--- !u!1 &1038003574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1038003575}
+  - component: {fileID: 1038003576}
+  m_Layer: 0
+  m_Name: Mirella
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1038003575
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038003574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1852125540}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1038003576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038003574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f80a6e9bf2493f4aaa16cd71d4e74d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooperationLevel: 0
 --- !u!1 &1050623708
 GameObject:
   m_ObjectHideFlags: 0
@@ -5079,7 +5128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.5002, y: -382.7807}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 97.5603, y: 269.8003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1741181315
@@ -5213,9 +5262,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1760299624}
   - component: {fileID: 1760299625}
+  - component: {fileID: 1760299627}
   - component: {fileID: 1760299626}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Gus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5230,7 +5280,7 @@ Transform:
   m_GameObject: {fileID: 1760299623}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1240, y: 141, z: 20}
+  m_LocalPosition: {x: -1255, y: -253, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5273,10 +5323,23 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: 1143825470043975606, guid: a526b521dadb77444be19894feabbef9, type: 2}
+  - key: {fileID: -6045624225331033619, guid: a526b521dadb77444be19894feabbef9, type: 2}
     value: {fileID: 1760299625}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &1760299627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137d6a04d8b858944ae4a777c8079d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooperationLevel: 0
 --- !u!1 &1805097879
 GameObject:
   m_ObjectHideFlags: 0
@@ -5374,7 +5437,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1852125540}
   - component: {fileID: 1852125541}
-  - component: {fileID: 1852125542}
   m_Layer: 0
   m_Name: SpriteManager
   m_TagString: Untagged
@@ -5396,6 +5458,7 @@ RectTransform:
   m_Children:
   - {fileID: 1879958809}
   - {fileID: 1760299624}
+  - {fileID: 1038003575}
   m_Father: {fileID: 1388554378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5429,23 +5492,6 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 9776815ca360f744ba45678e4fe55663, type: 3}
     - {fileID: 21300000, guid: b9406360e574ae34a9e8a8df1bbbe61b, type: 3}
     - {fileID: 21300000, guid: b9137c73e252a654ca0ca69322ba8e50, type: 3}
---- !u!320 &1852125542
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852125539}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: c811718e7cabb924ca05f2a19b508ea6, type: 2}
-  m_InitialState: 0
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings: []
-  m_ExposedReferences:
-    m_References: []
 --- !u!1 &1879958808
 GameObject:
   m_ObjectHideFlags: 0
