@@ -694,15 +694,15 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
-      useOverrides: 0
-      overrideSubtitleSettings: 0
+      useOverrides: 1
+      overrideSubtitleSettings: 1
       showNPCSubtitlesDuringLine: 1
       showNPCSubtitlesWithResponses: 1
       showPCSubtitlesDuringLine: 0
       skipPCSubtitleAfterResponseMenu: 0
       subtitleCharsPerSecond: 30
       minSubtitleSeconds: 2
-      continueButton: 0
+      continueButton: 1
       overrideSequenceSettings: 0
       defaultSequence: 
       defaultPlayerSequence: 
@@ -764,7 +764,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: None()
+        value: 
         type: 0
         typeString: 
       conversationID: 2
@@ -772,7 +772,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 2
@@ -823,6 +823,11 @@ MonoBehaviour:
           to you only made it harder. Thus, the walk was long and you pant as you
           went insidego inside. Surprisingly, the door wasn't locked, and as trash
           is scattered about the place it looks completely abandoned. The only thing
+          that suggests an inhabitant is the soft glow and crackle of a fire. You
+          were lost in the forest for a while and the crying trees whispering to
+          you only made it harder. Thus, the walk was long and you pant as you went
+          insidego inside. Surprisingly, the door wasn't locked, and as trash is
+          scattered about the place it looks completely abandoned. The only thing
           that suggests an inhabitant is the soft glow and crackle of a fire.
         type: 0
         typeString: CustomFieldType_Text
@@ -863,8 +868,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 80
+        x: 157
+        y: 82
         width: 160
         height: 30
     - id: 2
@@ -910,7 +915,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Timeline(Play, GameCanvas/SpriteManager/Player);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 2
@@ -1583,7 +1588,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 370.63828
-        y: 595.95746
+        y: 594.95746
         width: 160
         height: 30
     - id: 12
@@ -2161,8 +2166,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 370.45233
-        y: 888.1151
+        x: 369.27585
+        y: 890.4681
         width: 160
         height: 30
     - id: 20
@@ -2361,8 +2366,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 9.805031, y: 471.65317}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 228.12488}
+    canvasZoom: 0.64000034
   syncInfo:
     syncActors: 0
     syncItems: 0
