@@ -40,7 +40,7 @@ namespace MainMenu.Functionality
         {
             Destroy(GameObject.Find("Dialogue Manager"));
             SetUtilityMenuActive(false);
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("MainMenu_Mich");
         
         }
 
