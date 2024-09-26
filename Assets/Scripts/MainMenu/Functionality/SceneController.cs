@@ -7,6 +7,9 @@ namespace MainMenu.Functionality
     {
         [SerializeField] private GameObject pnlUtilityMenu;
         [SerializeField] private string firstSceneName;
+        [SerializeField] private GameObject panelExitGame;
+        [SerializeField] private GameObject utilityMenu;
+        [SerializeField] private GameObject utilityMenuHider;
         public string currentScene;
         public int currentSlot=0;
         string filename
@@ -62,7 +65,11 @@ namespace MainMenu.Functionality
 
         public void SetUtilityMenuActive(bool active)
         {
+            panelExitGame.SetActive(false);
+            utilityMenu.SetActive(false);
+            utilityMenuHider.SetActive(true);
             pnlUtilityMenu.SetActive(active);
+            
         }
         
     }
