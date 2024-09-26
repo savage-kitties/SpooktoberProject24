@@ -1003,6 +1003,12 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
+      - originConversationID: 2
+        originDialogueID: 3
+        destinationConversationID: 2
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -1041,7 +1047,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Are we in the right place?
+        value: Are we in the right place? Are we in the right place? Are we in the
+          right place? Are we in the right place? Are we in the right place? Are
+          we in the right place? Are we in the right place? Are we in the right place?
+          Are we in the right place? Are we in the right place? Are we in the right
+          place? Are we in the right place? Are we in the right place? Are we in
+          the right place? Are we in the right place? Are we in the right place?
+          Are we in the right place? Are we in the right place? Are we in the right
+          place? Are we in the right place? Are we in the right place? Are we in
+          the right place? Are we in the right place? Are we in the right place?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -2365,9 +2379,74 @@ MonoBehaviour:
         y: 885.7946
         width: 160
         height: 30
+    - id: 23
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: TESTIN GTESTING SFKDJFKJSDKFJSDJFKSDKJF
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 339.452
+        y: 227.26025
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 228.12488}
-    canvasZoom: 0.64000034
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.73000026
   syncInfo:
     syncActors: 0
     syncItems: 0
