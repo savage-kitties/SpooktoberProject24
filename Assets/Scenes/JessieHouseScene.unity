@@ -3011,7 +3011,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9776815ca360f744ba45678e4fe55663, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 953caea45fd341044868415f2eec6064, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6208,13 +6208,15 @@ PlayableDirector:
   m_GameObject: {fileID: 1879958808}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: c55f999be47290c4e8e2d362d60752d1, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 3a334cd963a09dd48a45a5f6fdfc61d8, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 6026343693319789763, guid: c55f999be47290c4e8e2d362d60752d1, type: 2}
+    value: {fileID: 1879958810}
+  - key: {fileID: 6010292604180589255, guid: 3a334cd963a09dd48a45a5f6fdfc61d8, type: 2}
     value: {fileID: 1879958810}
   m_ExposedReferences:
     m_References: []

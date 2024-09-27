@@ -3046,7 +3046,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Timeline(Play, GameCanvas/SpriteManager/Player);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 3
@@ -3791,7 +3791,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Player", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4082,7 +4082,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Player", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4427,7 +4427,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Fade(in, 5); SendMessage(ChangeBackground, 0, GameCanvas/Background);
+        value: 'Fade(in, 5); SendMessage(ChangeBackground, 0, GameCanvas/Background);
+
+'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 3
@@ -4445,7 +4447,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Player", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5526,7 +5528,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Player", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5962,7 +5964,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Player", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6546,7 +6548,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Player", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7123,7 +7125,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Player", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7194,7 +7196,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Player", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7896,8 +7898,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 2238.483}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7900002
   - id: 4
     fields:
     - title: Title
@@ -8283,7 +8285,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Timeline(Play, GameCanvas/SpriteManager/Player);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -8308,7 +8310,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 146
-        y: 295
+        y: 296.3158
         width: 160
         height: 30
     - id: 5
@@ -8711,7 +8713,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Timeline(Play, GameCanvas/SpriteManager/Mirella);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -13520,8 +13522,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 713.9525}
-    canvasZoom: 0.43000045
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7600002
   syncInfo:
     syncActors: 0
     syncItems: 0
