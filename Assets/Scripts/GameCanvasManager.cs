@@ -14,23 +14,18 @@ public class GameCanvasManager : MonoBehaviour
     private GusCooperationMeasurement gusCooperationInstance;
     private MirellaCooperationMeasurement mirellaCooperationInstance;
     private SearchManager searchManagerInstance;
-
+    private VariableManager variableManagerInstance;
+    
     void Start()
     {
-        // Register the SpriteManager with Lua
         RegisterSpriteManager();
-
-        // Register Gus and Mirella cooperation measurements with Lua
         RegisterGusCooperationMeasurement();
         RegisterMirellaCooperationMeasurement();
-
-        // Register SearchManager with Lua
         RegisterSearchManager();
-
+        RegisterVariableManager();
         
     }
 
-    // Method to register SpriteManager functions to Lua
     private void RegisterSpriteManager()
     {
         GameObject spriteManagerObject = GameObject.Find("SpriteManager");
@@ -54,7 +49,6 @@ public class GameCanvasManager : MonoBehaviour
         }
     }
 
-    // Method to register GusCooperationMeasurement functions to Lua
     private void RegisterGusCooperationMeasurement()
     {
         GameObject gusObject = GameObject.Find("SpriteManager/Gus");
@@ -79,7 +73,6 @@ public class GameCanvasManager : MonoBehaviour
         }
     }
 
-    // Method to register MirellaCooperationMeasurement functions to Lua
     private void RegisterMirellaCooperationMeasurement()
     {
         GameObject mirellaObject = GameObject.Find("SpriteManager/Mirella");
@@ -128,4 +121,31 @@ public class GameCanvasManager : MonoBehaviour
             Debug.LogError("SearchManager GameObject not found!");
         }
     }
+
+    private void RegisterVariableManager()
+{
+    GameObject variableManagerObject = GameObject.Find("Conversation");
+
+    if (variableManagerObject != null)
+    {
+        variableManagerInstance = variableManagerObject.GetComponent<VariableManager>();
+
+        if (variableManagerInstance != null)
+        {
+            Lua.RegisterFunction("GetBoolean", variableManagerInstance, typeof(VariableManager).GetMethod("GetBoolean"));
+            Lua.RegisterFunction("SetBoolean", variableManagerInstance, typeof(VariableManager).GetMethod("SetBoolean"));
+            Lua.RegisterFunction("CountClues", variableManagerInstance, typeof(VariableManager).GetMethod("CountClues"));
+            //Debug.Log("GetBoolean and SetBoolean functions registered successfully.");
+        }
+        else
+        {
+            Debug.LogError("VariableManager component not found on VariableManager object!");
+        }
+    }
+    else
+    {
+        Debug.LogError("VariableManager GameObject not found!");
+    }
+}
+   
 }
