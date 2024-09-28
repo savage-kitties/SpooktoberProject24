@@ -13,6 +13,7 @@ public class GameCanvasManager : MonoBehaviour
     private SpriteChanger spriteChangerInstance;
     private GusCooperationMeasurement gusCooperationInstance;
     private MirellaCooperationMeasurement mirellaCooperationInstance;
+    private SearchManager searchManagerInstance;
 
     void Start()
     {
@@ -22,6 +23,11 @@ public class GameCanvasManager : MonoBehaviour
         // Register Gus and Mirella cooperation measurements with Lua
         RegisterGusCooperationMeasurement();
         RegisterMirellaCooperationMeasurement();
+
+        // Register SearchManager with Lua
+        RegisterSearchManager();
+
+        
     }
 
     // Method to register SpriteManager functions to Lua
@@ -95,6 +101,31 @@ public class GameCanvasManager : MonoBehaviour
         else
         {
             Debug.LogError("Mirella GameObject not found!");
+        }
+    }
+
+    private void RegisterSearchManager()
+    {
+        GameObject searchManagerObject = GameObject.Find("SpriteManager/Mirella");
+
+        if (searchManagerObject != null)
+        {
+            searchManagerInstance = searchManagerObject.GetComponent<SearchManager>();
+
+            if (searchManagerInstance != null)
+            {
+                Lua.RegisterFunction("SetAllowedSearches", searchManagerInstance, typeof(SearchManager).GetMethod("SetAllowedSearches"));
+                Lua.RegisterFunction("ReduceAllowedSearches", searchManagerInstance, typeof(SearchManager).GetMethod("ReduceAllowedSearches"));
+                Lua.RegisterFunction("HasSearchesLeft", searchManagerInstance, typeof(SearchManager).GetMethod("HasSearchesLeft"));
+            }
+            else
+            {
+                Debug.LogError("SearchManager component not found on SearchManager object!");
+            }
+        }
+        else
+        {
+            Debug.LogError("SearchManager GameObject not found!");
         }
     }
 }
