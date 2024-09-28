@@ -228,664 +228,6 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
-  - id: 2
-    fields:
-    - title: Name
-      value: MirellaInteraction
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 3
-    fields:
-    - title: Name
-      value: GusInteraction
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 4
-    fields:
-    - title: Name
-      value: DuskClueA
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 5
-    fields:
-    - title: Name
-      value: DuskClueB
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 6
-    fields:
-    - title: Name
-      value: DuskClueC
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 7
-    fields:
-    - title: Name
-      value: DuskClueD
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 8
-    fields:
-    - title: Name
-      value: DuskClueE
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 9
-    fields:
-    - title: Name
-      value: DuskClueF
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 20
-    fields:
-    - title: Name
-      value: DuskClueG
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 10
-    fields:
-    - title: Name
-      value: MirellaClueA
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 11
-    fields:
-    - title: Name
-      value: MirellaClueB
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 12
-    fields:
-    - title: Name
-      value: MirellaClueC
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 16
-    fields:
-    - title: Name
-      value: SearchedBoutiqueA
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 17
-    fields:
-    - title: Name
-      value: SearchedBoutiqueB
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 18
-    fields:
-    - title: Name
-      value: SearchedBoutiqueC
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 19
-    fields:
-    - title: Name
-      value: SearchedBoutiqueD
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 13
-    fields:
-    - title: Name
-      value: GusClueA
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 14
-    fields:
-    - title: Name
-      value: GusClueB
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 15
-    fields:
-    - title: Name
-      value: GusClueC
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 21
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 22
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 23
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 24
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 25
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 26
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 27
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 28
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 29
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 30
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 31
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 32
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 33
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 34
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 35
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 36
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 37
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 38
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 39
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 40
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 41
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 42
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 43
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 44
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 45
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 46
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 47
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 48
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
   conversations:
   - id: 1
     fields:
@@ -3148,7 +2490,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.73000026
+    canvasZoom: 0.5800004
   - id: 3
     fields:
     - title: Title
@@ -3250,31 +2592,13 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 3
         originDialogueID: 0
         destinationConversationID: 3
-        destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      - originConversationID: 3
-        originDialogueID: 0
-        destinationConversationID: 3
-        destinationDialogueID: 40
-        isConnector: 0
-        priority: 2
-      - originConversationID: 3
-        originDialogueID: 0
-        destinationConversationID: 3
-        destinationDialogueID: 65
-        isConnector: 0
-        priority: 2
-      - originConversationID: 3
-        originDialogueID: 0
-        destinationConversationID: 3
-        destinationDialogueID: 66
+        destinationDialogueID: 75
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3284,8 +2608,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 164.47762
+        y: 1
         width: 160
         height: 30
     - id: 1
@@ -3357,8 +2681,8 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: Variable["MirellaInteraction"] == false and (Variable["GusInteraction"]
-        == false)
+      conditionsString: GetBoolean("MirellaInteraction") == false and GetBoolean("GusInteraction")
+        == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4377,7 +3701,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 276.98697
-        y: 835.67535
+        y: 834.67535
         width: 160
         height: 30
     - id: 17
@@ -5603,7 +4927,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["DuskClueA"] = true
+      userScript: SetBoolean("DuskClueA", true);
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5958,8 +5282,8 @@ MonoBehaviour:
         destinationDialogueID: 67
         isConnector: 0
         priority: 2
-      conditionsString: Variable["MirellaInteraction"] == true and (Variable["GusInteraction"]
-        == false)
+      conditionsString: GetBoolean("MirellaInteraction") == true and GetBoolean("GusInteraction")
+        == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -7620,8 +6944,8 @@ MonoBehaviour:
         destinationDialogueID: 68
         isConnector: 0
         priority: 2
-      conditionsString: Variable["GusInteraction"] == true and (Variable["MirellaInteraction"]
-        == false)
+      conditionsString: GetBoolean("GusInteraction") == true and GetBoolean("MirellaInteraction")
+        == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -7693,8 +7017,8 @@ MonoBehaviour:
         destinationDialogueID: 69
         isConnector: 0
         priority: 2
-      conditionsString: Variable["MirellaInteraction"] == true and (Variable["GusInteraction"]
-        == true)
+      conditionsString: GetBoolean("MirellaInteraction") == true and GetBoolean("GusInteraction")
+        == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8250,9 +7574,98 @@ MonoBehaviour:
         y: 231.36984
         width: 160
         height: 30
+    - id: 75
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: cont
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 75
+        destinationConversationID: 3
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 75
+        destinationConversationID: 3
+        destinationDialogueID: 40
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 75
+        destinationConversationID: 3
+        destinationDialogueID: 65
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 75
+        destinationConversationID: 3
+        destinationDialogueID: 66
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 387.56702
+        y: 1
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 0, y: 2324.0193}
+    canvasZoom: 0.8200002
   - id: 4
     fields:
     - title: Title
@@ -8354,159 +7767,11 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 0
-        destinationConversationID: 4
-        destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 0
-        destinationConversationID: 4
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 160
-        y: 30
-        width: 160
-        height: 30
-    - id: 1
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Dusk Clue Found
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 4
-        originDialogueID: 1
-        destinationConversationID: 4
-        destinationDialogueID: 3
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["DuskClueA"] == true
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 58
-        y: 139
-        width: 160
-        height: 30
-    - id: 2
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: testing
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 2
+        originDialogueID: 0
         destinationConversationID: 4
         destinationDialogueID: 3
         isConnector: 0
@@ -8518,8 +7783,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 232
-        y: 142
+        x: 144
+        y: 116
         width: 160
         height: 30
     - id: 3
@@ -8585,7 +7850,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["MirellaInteraction"] = true
+      userScript: SetBoolean("MirellaInteraction", true)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10338,7 +9603,7 @@ MonoBehaviour:
         destinationDialogueID: 32
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SearchedBoutiqueA"] == false
+      conditionsString: GetBoolean("SearchedBoutiqueA") == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10409,7 +9674,7 @@ MonoBehaviour:
         destinationDialogueID: 35
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SearchedBoutiqueB"] == false
+      conditionsString: GetBoolean("SearchedBoutiqueB") == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10480,7 +9745,7 @@ MonoBehaviour:
         destinationDialogueID: 36
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SearchedBoutiqueC"] == false
+      conditionsString: GetBoolean("SearchedBoutiqueC") == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10551,7 +9816,7 @@ MonoBehaviour:
         destinationDialogueID: 37
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SearchedBoutiqueD"] == false
+      conditionsString: GetBoolean("SearchedBoutiqueD") == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10706,8 +9971,8 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'ReduceAllowedSearches();
 
-        Variable["SearchedBoutiqueA"]
-        = true'
+        SetBoolean("SearchedBoutiqueA",
+        true);'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11010,8 +10275,8 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'ReduceAllowedSearches();
 
-        Variable["SearchedBoutiqueD"]
-        = true'
+        SetBoolean("SearchedBoutiqueD",
+        true);'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11446,7 +10711,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["MirellaClueB"] = true
+      userScript: SetBoolean("MirellaClueB", true)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11525,14 +10790,14 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'ReduceAllowedSearches();
 
-        Variable["SearchedBoutiqueB"]
-        = true'
+        SetBoolean("SearchedBoutiqueB",
+        true);'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 293.5292
+        x: 292.5292
         y: 1844.479
         width: 160
         height: 30
@@ -11956,7 +11221,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["MirellaClueA"] = true
+      userScript: SetBoolean("MirellaClueA", true)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12108,8 +11373,8 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'ReduceAllowedSearches();
 
-        Variable["SearchedBoutiqueC"]
-        = true'
+        SetBoolean("SearchedBoutiqueC",
+        true);'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13124,7 +12389,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: LoadLevel(JessieHouseScene);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -13134,7 +12399,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 67
+        destinationConversationID: 4
+        destinationDialogueID: 79
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -13219,7 +12490,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["DuskClueB"] = true
+      userScript: SetBoolean("DuskClueB", true);
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13584,7 +12855,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetMirellaCooperationLevel() >= 0
-      userScript: Variable["DuskClueG"] = true
+      userScript: SetBoolean("DuskClueG", true);
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13852,6 +13123,81 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 77
+        destinationConversationID: 4
+        destinationDialogueID: 78
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 336.0048
+        y: 2952.7175
+        width: 160
+        height: 30
+    - id: 78
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
         value: LoadLevel(JessieHouseScene);
         type: 0
         typeString: CustomFieldType_Text
@@ -13871,12 +13217,77 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 336.0048
-        y: 2952.7175
+        y: 3002.7175
+        width: 160
+        height: 30
+    - id: 79
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: LoadLevel(JessieHouseScene);
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 421.71906
+        y: 2549.6377
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 3.8109894, y: 2592.1567}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.52000046
   - id: 5
     fields:
     - title: Title
@@ -14726,8 +14137,7 @@ MonoBehaviour:
         destinationDialogueID: 14
         isConnector: 0
         priority: 2
-      conditionsString: Variable["GusClueA"] == true or (Variable["GusClueB"] ==
-        true) or (Variable["GusClueC"] == true)
+      conditionsString: CountClues("GusClue") >= 1
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -14798,8 +14208,7 @@ MonoBehaviour:
         destinationDialogueID: 25
         isConnector: 0
         priority: 2
-      conditionsString: Variable["MirellaClueA"] == true or (Variable["MirellaClueB"]
-        == true) or (Variable["MirellaClueC"] == true)
+      conditionsString: CountClues("MirellaClue") >= 1
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -14870,7 +14279,7 @@ MonoBehaviour:
         destinationDialogueID: 46
         isConnector: 0
         priority: 2
-      conditionsString: GetClueCount() >= 4
+      conditionsString: CountClues("DuskClue") >= 4
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -15299,8 +14708,7 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: Variable["GusClueA"] == true and (Variable["GusClueB"] ==
-        true)
+      conditionsString: GetBoolean("GusClueA") and GetBoolean("GusClueB")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -15372,7 +14780,7 @@ MonoBehaviour:
         destinationDialogueID: 20
         isConnector: 0
         priority: 2
-      conditionsString: Variable["GusClueC"] == true
+      conditionsString: GetBoolean("GusClueC")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16156,7 +15564,7 @@ MonoBehaviour:
         destinationDialogueID: 31
         isConnector: 0
         priority: 2
-      conditionsString: Variable["MirellaClueA"] == true
+      conditionsString: GetBoolean("MirellaClueA")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16228,7 +15636,7 @@ MonoBehaviour:
         destinationDialogueID: 32
         isConnector: 0
         priority: 2
-      conditionsString: Variable["MirellaClueB"] == true
+      conditionsString: GetBoolean("MirellaClueB")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16301,7 +15709,7 @@ MonoBehaviour:
         destinationDialogueID: 33
         isConnector: 0
         priority: 2
-      conditionsString: Variable["MirellaClueC"] == true
+      conditionsString: GetBoolean("MirellaClueC")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17595,16 +17003,16 @@ MonoBehaviour:
         destinationDialogueID: 51
         isConnector: 0
         priority: 2
-      conditionsString: Variable["DuskClueB"] == true or (Variable["DuskClueG"] ==
-        true)
+      conditionsString: GetBoolean("DuskClueB") == true or GetBoolean("DuskClueG")
+        == true
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 420
-        y: 755
+        x: 422.73975
+        y: 753.6301
         width: 160
         height: 30
     - id: 51
@@ -17669,8 +17077,8 @@ MonoBehaviour:
         destinationDialogueID: 52
         isConnector: 0
         priority: 2
-      conditionsString: Variable["DuskClueE"] == true or (Variable["DuskClueF"] ==
-        true)
+      conditionsString: GetBoolean("DuskClueE") == true or GetBoolean("DuskClueF")
+        == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -18045,8 +17453,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 173.52594}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7000003
   - id: 6
     fields:
     - title: Title
@@ -19942,8 +19350,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 184.98987}
-    canvasZoom: 0.5800004
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.5500004
   - id: 8
     fields:
     - title: Title
@@ -22280,8 +21688,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 12, y: 172}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.5800004
   syncInfo:
     syncActors: 0
     syncItems: 0

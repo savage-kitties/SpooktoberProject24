@@ -14,28 +14,18 @@ public class GameCanvasManager : MonoBehaviour
     private GusCooperationMeasurement gusCooperationInstance;
     private MirellaCooperationMeasurement mirellaCooperationInstance;
     private SearchManager searchManagerInstance;
-    private ClueCounter clueCounterInstance;
-
+    private VariableManager variableManagerInstance;
     
-
     void Start()
     {
-        // Register the SpriteManager with Lua
         RegisterSpriteManager();
-
-        // Register Gus and Mirella cooperation measurements with Lua
         RegisterGusCooperationMeasurement();
         RegisterMirellaCooperationMeasurement();
-
-        // Register SearchManager with Lua
         RegisterSearchManager();
-
-        // Register ClueCounter with Lua
-        RegisterClueCounter();
+        RegisterVariableManager();
         
     }
 
-    // Method to register SpriteManager functions to Lua
     private void RegisterSpriteManager()
     {
         GameObject spriteManagerObject = GameObject.Find("SpriteManager");
@@ -59,7 +49,6 @@ public class GameCanvasManager : MonoBehaviour
         }
     }
 
-    // Method to register GusCooperationMeasurement functions to Lua
     private void RegisterGusCooperationMeasurement()
     {
         GameObject gusObject = GameObject.Find("SpriteManager/Gus");
@@ -84,7 +73,6 @@ public class GameCanvasManager : MonoBehaviour
         }
     }
 
-    // Method to register MirellaCooperationMeasurement functions to Lua
     private void RegisterMirellaCooperationMeasurement()
     {
         GameObject mirellaObject = GameObject.Find("SpriteManager/Mirella");
@@ -134,26 +122,30 @@ public class GameCanvasManager : MonoBehaviour
         }
     }
 
-    private void RegisterClueCounter()
+    private void RegisterVariableManager()
+{
+    GameObject variableManagerObject = GameObject.Find("Conversation");
+
+    if (variableManagerObject != null)
     {
-        GameObject clueCounterObject = GameObject.Find("Conversation");
+        variableManagerInstance = variableManagerObject.GetComponent<VariableManager>();
 
-        if (clueCounterObject != null)
+        if (variableManagerInstance != null)
         {
-            clueCounterInstance = clueCounterObject.GetComponent<ClueCounter>();
-
-            if (clueCounterInstance != null)
-            {
-                Lua.RegisterFunction("GetClueCount", clueCounterInstance, typeof(ClueCounter).GetMethod("GetClueCount"));
-            }
-            else
-            {
-                Debug.LogError("ClueCounter component not found on ClueCounterObject!");
-            }
+            Lua.RegisterFunction("GetBoolean", variableManagerInstance, typeof(VariableManager).GetMethod("GetBoolean"));
+            Lua.RegisterFunction("SetBoolean", variableManagerInstance, typeof(VariableManager).GetMethod("SetBoolean"));
+            Lua.RegisterFunction("CountClues", variableManagerInstance, typeof(VariableManager).GetMethod("CountClues"));
+            //Debug.Log("GetBoolean and SetBoolean functions registered successfully.");
         }
         else
         {
-            Debug.LogError("ClueCounterObject GameObject not found!");
+            Debug.LogError("VariableManager component not found on VariableManager object!");
         }
     }
+    else
+    {
+        Debug.LogError("VariableManager GameObject not found!");
+    }
+}
+   
 }
