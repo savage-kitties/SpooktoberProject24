@@ -14,6 +14,9 @@ public class GameCanvasManager : MonoBehaviour
     private GusCooperationMeasurement gusCooperationInstance;
     private MirellaCooperationMeasurement mirellaCooperationInstance;
     private SearchManager searchManagerInstance;
+    private ClueCounter clueCounterInstance;
+
+    
 
     void Start()
     {
@@ -27,6 +30,8 @@ public class GameCanvasManager : MonoBehaviour
         // Register SearchManager with Lua
         RegisterSearchManager();
 
+        // Register ClueCounter with Lua
+        RegisterClueCounter();
         
     }
 
@@ -126,6 +131,29 @@ public class GameCanvasManager : MonoBehaviour
         else
         {
             Debug.LogError("SearchManager GameObject not found!");
+        }
+    }
+
+    private void RegisterClueCounter()
+    {
+        GameObject clueCounterObject = GameObject.Find("Conversation");
+
+        if (clueCounterObject != null)
+        {
+            clueCounterInstance = clueCounterObject.GetComponent<ClueCounter>();
+
+            if (clueCounterInstance != null)
+            {
+                Lua.RegisterFunction("GetClueCount", clueCounterInstance, typeof(ClueCounter).GetMethod("GetClueCount"));
+            }
+            else
+            {
+                Debug.LogError("ClueCounter component not found on ClueCounterObject!");
+            }
+        }
+        else
+        {
+            Debug.LogError("ClueCounterObject GameObject not found!");
         }
     }
 }
