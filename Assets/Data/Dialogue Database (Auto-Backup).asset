@@ -479,7 +479,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -493,7 +493,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -507,7 +507,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -521,7 +521,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -535,7 +535,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -549,7 +549,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -563,7 +563,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -577,7 +577,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -591,7 +591,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: false
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -7192,7 +7192,7 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 61
         destinationConversationID: 3
-        destinationDialogueID: 63
+        destinationDialogueID: 73
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -7204,77 +7204,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 427.4882
         y: 2800.5554
-        width: 160
-        height: 30
-    - id: 63
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Dusk Clue Found
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 3
-        originDialogueID: 63
-        destinationConversationID: 3
-        destinationDialogueID: 64
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["DuskClueA"] == true
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 426.35812
-        y: 2876.9521
         width: 160
         height: 30
     - id: 64
@@ -7728,7 +7657,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Gus chosen
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -7744,7 +7673,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: LoadLevel(CabinScene);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 3
@@ -7793,7 +7722,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Mirella chosen
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -7809,7 +7738,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: LoadLevel(BoutiqueScene);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 3
@@ -7897,9 +7826,74 @@ MonoBehaviour:
         y: 181.36984
         width: 160
         height: 30
+    - id: 73
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: LoadLevel(CabinScene);
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 427.4882
+        y: 2875.1455
+        width: 160
+        height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7900002
+    canvasZoom: 0.5500004
   - id: 4
     fields:
     - title: Title
@@ -8310,7 +8304,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 146
-        y: 295
+        y: 296.3158
         width: 160
         height: 30
     - id: 5
@@ -12771,7 +12765,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: LoadLevel(JessieHouseScene);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -12783,7 +12777,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: LoadLevel(JessieHouseScene);
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13499,7 +13493,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: LoadLevel(JessieHouseScene);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -13511,18 +13505,18 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: LoadLevel(JessieHouseScene);
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 336.0048
-        y: 2954.0334
+        y: 2952.7175
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 3.8109894, y: 2592.1567}
     canvasZoom: 0.7600002
   syncInfo:
     syncActors: 0
