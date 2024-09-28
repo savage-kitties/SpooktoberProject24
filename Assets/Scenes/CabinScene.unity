@@ -1146,6 +1146,7 @@ GameObject:
   - component: {fileID: 207085394}
   - component: {fileID: 207085395}
   - component: {fileID: 207085396}
+  - component: {fileID: 207085397}
   m_Layer: 0
   m_Name: Conversation
   m_TagString: Untagged
@@ -1273,6 +1274,18 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: 99ce9ca4031c7e04d96458f983f539d7, type: 2}
+--- !u!114 &207085397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207085393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9be218014491a4981709c54065bffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &214009045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3551,6 +3564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1038003575}
   - component: {fileID: 1038003576}
+  - component: {fileID: 1038003577}
   m_Layer: 0
   m_Name: Mirella
   m_TagString: Untagged
@@ -3590,6 +3604,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooperationLevel: 0
+--- !u!114 &1038003577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038003574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b4e9bf80fdfb14abb31c9513a641c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirellaCooperation: {fileID: 1038003576}
 --- !u!1 &1050623708
 GameObject:
   m_ObjectHideFlags: 0
@@ -4777,10 +4804,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
