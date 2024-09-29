@@ -1115,7 +1115,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SendMessage(ChangeBackground, 0, GameCanvas/ParallaxBackground)
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 2
