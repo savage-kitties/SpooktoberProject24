@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 8d66f3acb4173c442bd4a9935a91a5c2
+<<<<<<<< HEAD:Assets/Scenes/DuskEndingScene.unity.meta
+guid: 42a13ef426332ae4e83e8920c45e9108
+========
+guid: b0ada21010775c04b96f5514574544dc
+>>>>>>>> main:Assets/Scenes/Mich_TownSquareDayScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

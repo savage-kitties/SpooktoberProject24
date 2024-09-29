@@ -67,10 +67,29 @@ namespace FXManagement
         [SerializeField] private AudioClip stp_Running;
         [SerializeField] private AudioClip stp_Townsquare;
 
+        [SerializeField] private AudioClip ui_Case;
+        [SerializeField] private AudioClip ui_Close;
+        [SerializeField] private AudioClip ui_Closet;
+        [SerializeField] private AudioClip ui_Coat;
+        [SerializeField] private AudioClip ui_Exit;
+        [SerializeField] private AudioClip ui_Ground;
+        [SerializeField] private AudioClip ui_Gus;
+        [SerializeField] private AudioClip ui_Mirella;
+        [SerializeField] private AudioClip ui_Negative;
+        [SerializeField] private AudioClip ui_Nothing;
+        [SerializeField] private AudioClip ui_Open;
+        [SerializeField] private AudioClip ui_Page;
+        [SerializeField] private AudioClip ui_Picture;
+        [SerializeField] private AudioClip ui_Positive;
+        [SerializeField] private AudioClip ui_Room;
+        [SerializeField] private AudioClip ui_Select;
+        [SerializeField] private AudioClip ui_Something;
+
         [SerializeField] private AudioSource ambientFx;
         [SerializeField] private AudioSource impactFx;
         [SerializeField] private AudioSource sfx;
         [SerializeField] private AudioSource stepsFX;
+        [SerializeField] private AudioSource uiFX;
 
         [SerializeField] private GameObject vfx_displayCase;
         [SerializeField] private GameObject vfx_fireParent;
@@ -310,6 +329,79 @@ namespace FXManagement
         {
             sfx.Stop();
         }
+        public void PlayUIFX(string uType)
+        {
+            switch (uType)
+            {
+                case "Case":
+                    uiFX.clip = ui_Case;
+                    break;
+                case "Close":
+                    uiFX.clip = ui_Close;
+                    break;
+                case "Closet":
+                    uiFX.clip = ui_Closet;
+                    break;
+                case "Coat":
+                    uiFX.clip = ui_Coat;
+                    break;
+               
+                case "Exit":
+                    uiFX.clip = ui_Exit;;
+                    break;
+                case "Ground":
+                    uiFX.clip = ui_Ground;
+                    break;
+                case "Gus":
+                    uiFX.clip = ui_Gus;;
+                    break;
+                
+                case "Mirella":
+                    uiFX.clip = ui_Mirella;
+                    break;
+                case "Negative":
+                    uiFX.clip = ui_Negative;;
+                    break;
+                case "Nothing":
+                    uiFX.clip = ui_Nothing;
+                    break;
+                case "Open":
+                    uiFX.clip = ui_Open;
+                    break;
+                case "Page":
+                    uiFX.clip = ui_Page;
+                    break;
+                
+                case "Picture":
+                    uiFX.clip = ui_Picture;
+                    break;
+                case "Positive":
+                    uiFX.clip = ui_Positive;
+                    break;
+                case "Room":
+                    uiFX.clip = ui_Room ;
+                    break;
+                case "Select":
+                    uiFX.clip = ui_Select;
+                    break;
+                case "Something":
+                    uiFX.clip =ui_Something ;
+                    break;
+                
+                
+                default:
+                {
+                    throw new ArgumentOutOfRangeException(nameof(uType), uType, null);
+                }
+ 
+                
+            }
+            uiFX.Play();
+        }
+        public void StopUIFX()
+        {
+            uiFX.Stop();
+        }
         public void PlayStepsFX(string sType)
         {
             switch (sType)
@@ -537,6 +629,7 @@ namespace FXManagement
             Lua.RegisterFunction("PlayImpactFX", this, typeof(FXManager).GetMethod("PlayImpactFX"));
             Lua.RegisterFunction("StopImpactFX", this, typeof(FXManager).GetMethod("StopImpactFX"));
             Lua.RegisterFunction("PlaySFX", this, typeof(FXManager).GetMethod("PlaySFX"));
+            Lua.RegisterFunction("PlayUIFX", this, typeof(FXManager).GetMethod("PlayUIFX"));
             Lua.RegisterFunction("StopSFX", this, typeof(FXManager).GetMethod("StopSFX"));
             Lua.RegisterFunction("PlayStepsFX", this, typeof(FXManager).GetMethod("PlayStepsFX"));
             Lua.RegisterFunction("StopStepsFX", this, typeof(FXManager).GetMethod("StopStepsFX"));
