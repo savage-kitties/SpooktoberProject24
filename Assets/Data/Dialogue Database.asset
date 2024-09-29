@@ -645,7 +645,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Police")
+      userScript: 'PlaySFX("Police");
+
+        PlayVFX("jessie")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1376,7 +1378,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlaySFX("Splat");
+
+        PlayStepsFX("Running");
+
+        PlayVFX("tomato")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1452,8 +1458,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 132.28421}
-    canvasZoom: 0.48999998
+    canvasScrollPosition: {x: 32.857117, y: 572.8573}
+    canvasZoom: 0.6999998
   - id: 2
     fields:
     - title: Title
@@ -10725,7 +10731,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "2");
+      userScript: 'SpriteManager_ChangeSprite("Player", "2");
+
+        PlaySFX("Screech")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10797,7 +10805,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Pet")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10869,14 +10877,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Pet")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 359.07648
-        y: 909.55597
+        y: 908.29016
         width: 160
         height: 30
     - id: 19
@@ -11380,7 +11388,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Bite")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11594,7 +11602,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Pet")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11737,7 +11745,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Brush")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11885,7 +11893,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Hat")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14684,7 +14692,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14695,8 +14705,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 854.28577}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 34.117676, y: 1489.4124}
+    canvasZoom: 0.84999967
   - id: 4
     fields:
     - title: Title
@@ -28719,8 +28729,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5800004
+    canvasScrollPosition: {x: 2.5, y: 0}
+    canvasZoom: 0.40000045
   syncInfo:
     syncActors: 0
     syncItems: 0
