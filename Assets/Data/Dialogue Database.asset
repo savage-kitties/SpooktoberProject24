@@ -1651,7 +1651,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayAmbientFX("Branches");
+
+        PlayStepsFX("Forest")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1722,7 +1724,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayAmbientFX("Cracking");
+
+        PlayVFX("sparklesGus")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2078,7 +2082,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlaySFX("Creaking");
+
+        PlayVFX("warningSmoke")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2155,7 +2161,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: StopVFX("warningSmoke")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2226,7 +2232,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayUIFX("Closet")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2297,7 +2303,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayStepsFX("Running")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3101,7 +3107,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Metalic")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3330,7 +3336,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayUIFX("Closet")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3835,7 +3841,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Axe")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4067,7 +4073,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayVFX("gus")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5122,7 +5128,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Write")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5486,7 +5492,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Paper")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8031,7 +8037,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Flaping")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9526,8 +9532,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 221.0039, y: 1495.2034}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 664.50885, y: 2536.1812}
+    canvasZoom: 0.79000026
   - id: 3
     fields:
     - title: Title
@@ -14705,8 +14711,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 821.953}
-    canvasZoom: 0.63999987
+    canvasScrollPosition: {x: 172.60284, y: 0}
+    canvasZoom: 0.7299998
   - id: 4
     fields:
     - title: Title
@@ -20339,8 +20345,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 249.99988, y: 1556.9012}
-    canvasZoom: 0.8200003
+    canvasScrollPosition: {x: 27.967175, y: 19.002197}
+    canvasZoom: 0.85000026
   - id: 5
     fields:
     - title: Title
@@ -24506,8 +24512,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 72.63146, y: 20.048143}
+    canvasZoom: 0.85000014
   - id: 6
     fields:
     - title: Title
@@ -25418,8 +25424,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 35.98757, y: 26.315765}
+    canvasZoom: 0.7600002
   - id: 7
     fields:
     - title: Title
@@ -26403,8 +26409,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 5.548935, y: 0}
+    canvasZoom: 0.85000014
   - id: 8
     fields:
     - title: Title
@@ -28036,8 +28042,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 141.96083, y: 514.1206}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.97
   - id: 9
     fields:
     - title: Title
@@ -28741,8 +28747,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2.5, y: 0}
-    canvasZoom: 0.40000045
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.3400005
   syncInfo:
     syncActors: 0
     syncItems: 0

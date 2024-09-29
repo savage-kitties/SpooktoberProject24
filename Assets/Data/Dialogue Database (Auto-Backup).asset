@@ -645,7 +645,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Police")
+      userScript: 'PlaySFX("Police");
+
+        PlayVFX("jessie")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1456,8 +1458,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 20.68964, y: 12.864712}
-    canvasZoom: 0.5799999
+    canvasScrollPosition: {x: 32.857117, y: 572.8573}
+    canvasZoom: 0.6999998
   - id: 2
     fields:
     - title: Title
@@ -1649,7 +1651,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayAmbientFX("Branches");
+
+        PlayStepsFX("Forest")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1720,7 +1724,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayAmbientFX("Cracking");
+
+        PlayVFX("sparklesGus")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2076,7 +2082,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlaySFX("Creaking");
+
+        PlayVFX("warningSmoke")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2153,7 +2161,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: StopVFX("warningSmoke")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2224,7 +2232,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayUIFX("Closet")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2295,7 +2303,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayStepsFX("Running")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3099,7 +3107,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Metalic")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3328,7 +3336,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayUIFX("Closet")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3833,7 +3841,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Axe")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4065,7 +4073,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayVFX("gus")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9524,8 +9532,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 221.0039, y: 1495.2034}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 234.99817, y: 659.6398}
+    canvasZoom: 0.7000003
   - id: 3
     fields:
     - title: Title
@@ -10729,7 +10737,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "2");
+      userScript: 'SpriteManager_ChangeSprite("Player", "2");
+
+        PlaySFX("Screech")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10801,7 +10811,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Pet")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10873,14 +10883,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Pet")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 359.07648
-        y: 909.55597
+        y: 908.29016
         width: 160
         height: 30
     - id: 19
@@ -11384,7 +11394,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Bite")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11598,7 +11608,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Pet")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11741,7 +11751,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Brush")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11889,7 +11899,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Hat")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14688,7 +14698,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlayVFX("plumas")
+      userScript: 'PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14699,8 +14711,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 111.64042, y: 73.09207}
-    canvasZoom: 1.0299995
+    canvasScrollPosition: {x: 172.60284, y: 0}
+    canvasZoom: 0.7299998
   - id: 4
     fields:
     - title: Title
@@ -14818,7 +14830,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 144
+        x: 145.42857
         y: 116
         width: 160
         height: 30
@@ -14885,7 +14897,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetBoolean("MirellaInteraction", true)
+      userScript: 'SetBoolean("MirellaInteraction", true);
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14956,7 +14970,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Boutique")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15028,14 +15042,18 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("displayCase");
+
+        PlayVFX("incense");
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 146
-        y: 345
+        y: 343.5714
         width: 160
         height: 30
     - id: 6
@@ -15099,7 +15117,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayStepsFX("Boutique")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15242,7 +15260,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Screech")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15320,7 +15338,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 146
-        y: 545
+        y: 544.0291
         width: 160
         height: 30
     - id: 10
@@ -15391,7 +15409,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 146
-        y: 595
+        y: 594.0566
         width: 160
         height: 30
     - id: 11
@@ -15462,7 +15480,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayVFX("mirella")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16478,7 +16496,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetAllowedSearches()
+      userScript: 'SetAllowedSearches();
+
+        StopVFX("mirella");
+
+        PlayStepsFX("Backstore")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16639,7 +16661,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetBoolean("SearchedBoutiqueA") == false
-      userScript: 
+      userScript: PlayUIFX("Coat")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16710,7 +16732,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetBoolean("SearchedBoutiqueB") == false
-      userScript: 
+      userScript: PlayUIFX("Picture")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16781,7 +16803,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetBoolean("SearchedBoutiqueC") == false
-      userScript: 
+      userScript: PlayUIFX("Ground")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17085,7 +17107,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: HasSearchesLeft() == false
-      userScript: 
+      userScript: PlayVFX("mirella")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17311,7 +17333,9 @@ MonoBehaviour:
       userScript: 'ReduceAllowedSearches();
 
         SetBoolean("SearchedBoutiqueD",
-        true);'
+        true);
+
+        PlayStepsFX("Backstore")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18701,7 +18725,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Dress")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18938,7 +18962,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Paper")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20321,8 +20345,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1207.3054}
-    canvasZoom: 0.64000034
+    canvasScrollPosition: {x: 27.967175, y: 19.002197}
+    canvasZoom: 0.85000026
   - id: 5
     fields:
     - title: Title
@@ -24488,8 +24512,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 72.63146, y: 20.048143}
+    canvasZoom: 0.85000014
   - id: 6
     fields:
     - title: Title
@@ -25400,8 +25424,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 35.98757, y: 26.315765}
+    canvasZoom: 0.7600002
   - id: 7
     fields:
     - title: Title
@@ -26385,8 +26409,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 5.548935, y: 0}
+    canvasZoom: 0.85000014
   - id: 8
     fields:
     - title: Title
@@ -28018,8 +28042,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 141.96083, y: 514.1206}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.97
   - id: 9
     fields:
     - title: Title
@@ -28723,8 +28747,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2.5, y: 0}
-    canvasZoom: 0.40000045
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.3400005
   syncInfo:
     syncActors: 0
     syncItems: 0
