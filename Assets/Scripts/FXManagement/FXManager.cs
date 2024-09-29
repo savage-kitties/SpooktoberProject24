@@ -72,6 +72,30 @@ namespace FXManagement
         [SerializeField] private AudioSource sfx;
         [SerializeField] private AudioSource stepsFX;
 
+        [SerializeField] private GameObject vfx_displayCase;
+        [SerializeField] private GameObject vfx_fireParent;
+        [SerializeField] private GameObject vfx_bloodFountain;
+        [SerializeField] private GameObject vfx_tomato;
+        [SerializeField] private GameObject vfx_incense;
+        [SerializeField] private GameObject vfx_DrippingBlood;
+        [SerializeField] private GameObject vfx_dusk1;
+        [SerializeField] private GameObject vfx_dusk2;
+        [SerializeField] private GameObject vfx_fog;
+        [SerializeField] private GameObject vfx_fountain;
+        [SerializeField] private GameObject vfx_inicio;
+        [SerializeField] private GameObject vfx_jessie;
+        [SerializeField] private GameObject vfx_lessCooperation;
+        [SerializeField] private GameObject vfx_mirella;
+        [SerializeField] private GameObject vfx_moreCooperation;
+        [SerializeField] private GameObject vfx_neutralSelection;
+        [SerializeField] private GameObject vfx_rain;
+        [SerializeField] private GameObject vfx_treeLeaf;
+        [SerializeField] private GameObject vfx_warningSmoke;
+        [SerializeField] private GameObject vfx_plumas;
+        [SerializeField] private GameObject vfx_sparklesGus;
+        [SerializeField] private GameObject vfx_dusk3;
+        [SerializeField] private GameObject vfx_gus;
+
 
         private void Start()
         {
@@ -316,6 +340,196 @@ namespace FXManagement
         {
             stepsFX.Stop();
         }
+        public void PlayVFX(string vType)
+        {
+            StopVFX(vType);
+            switch (vType)
+            {
+                case "displayCase":
+                    vfx_displayCase.SetActive(true);
+                    break;
+                case "fireParent":
+                    vfx_fireParent.SetActive(true);
+                    break;
+                case "bloodFountain":
+                    vfx_bloodFountain.SetActive(true);
+                    break;
+                case "tomato":
+                    vfx_tomato.SetActive(true);
+                    break;
+                case "incense":
+                    vfx_incense.SetActive(true);
+                    break;
+                
+                case "DrippingBlood":
+                    vfx_DrippingBlood.SetActive(true);
+                    break;
+                case "dusk1":
+                    vfx_dusk1.SetActive(true);
+                    break;
+                case "dusk2":
+                    vfx_dusk2.SetActive(true);
+                    break;
+                case "fog":
+                    vfx_fog.SetActive(true);
+                    break;
+                case "fountain":
+                    vfx_fountain.SetActive(true);
+                    break;
+                case "inicio":
+                    vfx_inicio.SetActive(true);
+                    break;
+                case "jessie":
+                    vfx_jessie.SetActive(true);
+                    break;
+                case "lessCooperation":
+                    vfx_lessCooperation.SetActive(true);
+                    break;
+                case "mirella":
+                    vfx_mirella.SetActive(true);
+                    break;
+                case "moreCooperation":
+                    vfx_moreCooperation.SetActive(true);
+                    break;
+                case "neutralSelection":
+                    vfx_neutralSelection.SetActive(true);
+                    break;
+                case "rain":
+                    vfx_rain.SetActive(true);
+                    break;
+                case "treeLeaf":
+                    vfx_treeLeaf.SetActive(true);
+                    break;
+                case "warningSmoke":
+                    vfx_warningSmoke.SetActive(true);
+                    break;
+                case "plumas":
+                    vfx_plumas.SetActive(true);
+                    break;
+                case "sparklesGus":
+                    vfx_sparklesGus.SetActive(true);
+                    break;
+                case "dusk3":
+                    vfx_dusk3.SetActive(true);
+                    break;
+                case "gus":
+                    vfx_gus.SetActive(true);
+                    break;
+                default:
+                {
+                    throw new ArgumentOutOfRangeException(nameof(vType), vType, null);
+
+
+                }
+            }
+        }
+        public void StopVFX(string vType)
+        {
+            switch (vType)
+            {
+                case "displayCase":
+                    vfx_displayCase.SetActive(false);
+                    break;
+                case "fireParent":
+                    vfx_fireParent.SetActive(false);
+                    break;
+                case "bloodFountain":
+                    vfx_bloodFountain.SetActive(false);
+                    break;
+                case "tomato":
+                    vfx_tomato.SetActive(false);
+                    break;
+                case "incense":
+                    vfx_incense.SetActive(false);
+                    break;
+                
+                case "DrippingBlood":
+                    vfx_DrippingBlood.SetActive(false);
+                    break;
+                case "dusk1":
+                    vfx_dusk1.SetActive(false);
+                    break;
+                case "dusk2":
+                    vfx_dusk2.SetActive(false);
+                    break;
+                case "fog":
+                    vfx_fog.SetActive(false);
+                    break;
+                case "fountain":
+                    vfx_fountain.SetActive(false);
+                    break;
+                case "inicio":
+                    vfx_inicio.SetActive(false);
+                    break;
+                case "jessie":
+                    vfx_jessie.SetActive(false);
+                    break;
+                case "lessCooperation":
+                    vfx_lessCooperation.SetActive(false);
+                    break;
+                case "mirella":
+                    vfx_mirella.SetActive(false);
+                    break;
+                case "moreCooperation":
+                    vfx_moreCooperation.SetActive(false);
+                    break;
+                case "neutralSelection":
+                    vfx_neutralSelection.SetActive(false);
+                    break;
+                case "rain":
+                    vfx_rain.SetActive(false);
+                    break;
+                case "treeLeaf":
+                    vfx_treeLeaf.SetActive(false);
+                    break;
+                case "warningSmoke":
+                    vfx_warningSmoke.SetActive(false);
+                    break;
+                case "plumas":
+                    vfx_plumas.SetActive(false);
+                    break;
+                case "sparklesGus":
+                    vfx_sparklesGus.SetActive(false);
+                    break;
+                case "dusk3":
+                    vfx_dusk3.SetActive(false);
+                    break;
+                case "gus":
+                    vfx_gus.SetActive(false);
+                    break;
+                case "all":
+                    vfx_displayCase.SetActive(false);
+                    vfx_fireParent.SetActive(false);
+                    vfx_bloodFountain.SetActive(false);
+                    vfx_tomato.SetActive(false);
+                    vfx_incense.SetActive(false);
+                    vfx_DrippingBlood.SetActive(false);
+                    vfx_dusk1.SetActive(false);
+                    vfx_dusk2.SetActive(false);
+                    vfx_fog.SetActive(false);
+                    vfx_fountain.SetActive(false);
+                    vfx_inicio.SetActive(false);
+                    vfx_jessie.SetActive(false);
+                    vfx_lessCooperation.SetActive(false);
+                    vfx_mirella.SetActive(false);
+                    vfx_moreCooperation.SetActive(false);
+                    vfx_neutralSelection.SetActive(false);
+                    vfx_rain.SetActive(false);
+                    vfx_treeLeaf.SetActive(false);
+                    vfx_warningSmoke.SetActive(false);
+                    vfx_plumas.SetActive(false);
+                    vfx_sparklesGus.SetActive(false);
+                    vfx_dusk3.SetActive(false);
+                    vfx_gus.SetActive(false);
+                    break;
+                default:
+                {
+                    throw new ArgumentOutOfRangeException(nameof(vType), vType, null);
+
+
+                }
+            }
+        }
         private void RegisterFx()
         {
             Lua.RegisterFunction("PlayAmbientFX", this, typeof(FXManager).GetMethod("PlayAmbientFX"));
@@ -326,6 +540,9 @@ namespace FXManagement
             Lua.RegisterFunction("StopSFX", this, typeof(FXManager).GetMethod("StopSFX"));
             Lua.RegisterFunction("PlayStepsFX", this, typeof(FXManager).GetMethod("PlayStepsFX"));
             Lua.RegisterFunction("StopStepsFX", this, typeof(FXManager).GetMethod("StopStepsFX"));
+            Lua.RegisterFunction("PlayVFX", this, typeof(FXManager).GetMethod("PlayVFX"));
+            Lua.RegisterFunction("StopVFX", this, typeof(FXManager).GetMethod("StopVFX"));
+
         }
     }
 }
