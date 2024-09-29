@@ -29,6 +29,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TownSquareNightScene.unity
     guid: f26f2aa9447bf5b49bdaa3cb43308877
+  - enabled: 1
+    path: Assets/Scenes/GusEndingScene.unity
+    guid: 0e6978b07a4ea2a4fb46ecbf929b3f6c
+  - enabled: 1
+    path: Assets/Scenes/MirellaEndingScene.unity
+    guid: 3642d2c23c01a7e4ab283620424a0594
+  - enabled: 1
+    path: Assets/Scenes/JessieEndingScene.unity
+    guid: 7b4c5d2243ea94f489ac4e190e4e7a74
+  - enabled: 1
+    path: Assets/Scenes/DuskEndingScene.unity
+    guid: 21de0020deb5d63429f82ea62cf3e006
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 275950de0d089ce48995cbed5cd17ba6, type: 2}
     com.unity.localization.addressable-group-rules: {fileID: 11400000, guid: 0c97963a52a5c10408bb74b3584af13f, type: 2}
