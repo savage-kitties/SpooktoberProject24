@@ -415,14 +415,16 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayAmbientFX("Fountain") ;
+
+        PlayVFX("bloodFountain")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 80
+        y: 78.73418
         width: 160
         height: 30
     - id: 2
@@ -643,7 +645,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Police")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -866,7 +868,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 269
-        y: 284
+        y: 282.93616
         width: 160
         height: 30
     - id: 8
@@ -1300,7 +1302,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Laughs")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1450,8 +1452,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2, y: 462}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 132.28421}
+    canvasZoom: 0.48999998
   - id: 2
     fields:
     - title: Title
@@ -3866,8 +3868,8 @@ MonoBehaviour:
       - title: Dialogue Text
         value: '(desperate)
 
-          I-I need wood for the fire, it gets cold
-          out here, and
+          I-I need wood for the fire, it gets cold out
+          here, and
 
           sometimes trees let out their sticky red liquid.'
         type: 0
@@ -5414,7 +5416,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 703.9183
-        y: 1677.5547
+        y: 1676.0621
         width: 160
         height: 30
     - id: 59
@@ -6605,8 +6607,7 @@ MonoBehaviour:
           more
           careful, strange things have been happening in these
 
-          parts
-          lately.'
+          parts lately.'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -9519,8 +9520,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1.6394043, y: 2178.6877}
-    canvasZoom: 0.6100004
+    canvasScrollPosition: {x: 221.0039, y: 1495.2034}
+    canvasZoom: 0.6700003
   - id: 3
     fields:
     - title: Title

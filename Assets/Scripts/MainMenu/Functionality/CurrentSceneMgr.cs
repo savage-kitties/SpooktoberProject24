@@ -9,10 +9,11 @@ namespace MainMenu.Functionality
         private SceneController _mainSceneController;
         private FXManager _fxManager;
         private void Awake()
-        {
+        { 
             _mainSceneController = GameObject.Find("CanvasSceneMngr").GetComponent<SceneController>();
             _mainSceneController.SetUtilityMenuActive(true);
             _mainSceneController.SaveInCurrentSlot();
+            _fxManager = _mainSceneController.gameObject.GetComponent<FXManager>();
             _fxManager.StopVFX("all");
             _fxManager.StopAmbientFX();
             _fxManager.StopImpactFX();
