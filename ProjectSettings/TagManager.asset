@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - MainCamera
+  - VFX
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: VFX
+    uniqueID: 1924055759
+    locked: 0
+  - name: Front
+    uniqueID: 878361983
     locked: 0
