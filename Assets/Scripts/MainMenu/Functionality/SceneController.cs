@@ -1,3 +1,5 @@
+using System;
+using FXManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +16,7 @@ namespace MainMenu.Functionality
         [SerializeField] private GameObject vfxCamera;
         public string currentScene;
         public int currentSlot=0;
+        private FXManager _fxManager;
         string filename
         {
             get { return "SaveFile" + currentSlot + ".es3"; }
@@ -23,6 +26,14 @@ namespace MainMenu.Functionality
             DontDestroyOnLoad(this.gameObject);
             DontDestroyOnLoad(vfxs);
             DontDestroyOnLoad(vfxCamera);
+        }
+
+        private void Start()
+        {
+            _fxManager = GetComponent<FXManager>();
+            _fxManager.PlayAmbientFX("Leaves");
+            _fxManager.PlayStepsFX("Forest");
+            _fxManager.PlayVFX("inicio");
         }
 
         public void ExitGame()
@@ -47,7 +58,7 @@ namespace MainMenu.Functionality
         {
             Destroy(GameObject.Find("Dialogue Manager"));
             SetUtilityMenuActive(false);
-            SceneManager.LoadScene("MainMenu_Mich");
+            SceneManager.LoadScene("MainMenu");
         
         }
 

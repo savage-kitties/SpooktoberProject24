@@ -6,17 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu_Ser.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 302b3cd47a420b543880556a0284aeed
   - enabled: 1
-    path: Assets/Scenes/MainMenu_Mich.unity
-    guid: 4786c4aebf9217145a95ff86b0dd1a0b
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/TownSquareDayScene.unity
-    guid: 8d66f3acb4173c442bd4a9935a91a5c2
+    guid: 42a13ef426332ae4e83e8920c45e9108
   - enabled: 1
     path: Assets/Scenes/JessieHouseScene.unity
     guid: 55b4f00d5d9225447b5bf2f1e211677f
@@ -40,7 +34,7 @@ EditorBuildSettings:
     guid: 7b4c5d2243ea94f489ac4e190e4e7a74
   - enabled: 1
     path: Assets/Scenes/DuskEndingScene.unity
-    guid: 21de0020deb5d63429f82ea62cf3e006
+    guid: ad0b84e8e60bc774392657b49d41be49
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 275950de0d089ce48995cbed5cd17ba6, type: 2}
     com.unity.localization.addressable-group-rules: {fileID: 11400000, guid: 0c97963a52a5c10408bb74b3584af13f, type: 2}
