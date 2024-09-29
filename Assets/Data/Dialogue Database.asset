@@ -14705,8 +14705,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 34.117676, y: 1489.4124}
-    canvasZoom: 0.84999967
+    canvasScrollPosition: {x: 0, y: 821.953}
+    canvasZoom: 0.63999987
   - id: 4
     fields:
     - title: Title
@@ -14824,7 +14824,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 144
+        x: 145.42857
         y: 116
         width: 160
         height: 30
@@ -14891,7 +14891,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetBoolean("MirellaInteraction", true)
+      userScript: 'SetBoolean("MirellaInteraction", true);
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14962,7 +14964,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Boutique")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15034,14 +15036,18 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("displayCase");
+
+        PlayVFX("incense");
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 146
-        y: 345
+        y: 343.5714
         width: 160
         height: 30
     - id: 6
@@ -15105,7 +15111,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayStepsFX("Boutique")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15248,7 +15254,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Screech")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15326,7 +15332,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 146
-        y: 545
+        y: 544.0291
         width: 160
         height: 30
     - id: 10
@@ -15397,7 +15403,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 146
-        y: 595
+        y: 594.0566
         width: 160
         height: 30
     - id: 11
@@ -15468,7 +15474,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayVFX("mirella")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16484,7 +16490,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetAllowedSearches()
+      userScript: 'SetAllowedSearches();
+
+        StopVFX("mirella");
+
+        PlayStepsFX("Backstore")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16645,7 +16655,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetBoolean("SearchedBoutiqueA") == false
-      userScript: 
+      userScript: PlayUIFX("Coat")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16716,7 +16726,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetBoolean("SearchedBoutiqueB") == false
-      userScript: 
+      userScript: PlayUIFX("Picture")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16787,7 +16797,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetBoolean("SearchedBoutiqueC") == false
-      userScript: 
+      userScript: PlayUIFX("Ground")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17091,7 +17101,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: HasSearchesLeft() == false
-      userScript: 
+      userScript: PlayVFX("mirella")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17317,7 +17327,9 @@ MonoBehaviour:
       userScript: 'ReduceAllowedSearches();
 
         SetBoolean("SearchedBoutiqueD",
-        true);'
+        true);
+
+        PlayStepsFX("Backstore")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18707,7 +18719,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Dress")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18944,7 +18956,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Paper")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20327,8 +20339,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1207.3054}
-    canvasZoom: 0.64000034
+    canvasScrollPosition: {x: 249.99988, y: 1556.9012}
+    canvasZoom: 0.8200003
   - id: 5
     fields:
     - title: Title

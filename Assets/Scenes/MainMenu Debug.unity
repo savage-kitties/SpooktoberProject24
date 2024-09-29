@@ -13565,7 +13565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pnlUtilityMenu: {fileID: 515302567}
-  firstSceneName: JessieHouseScene
+  firstSceneName: Boutique
   panelExitGame: {fileID: 881222638}
   utilityMenu: {fileID: 643999321}
   utilityMenuHider: {fileID: 288127846}
