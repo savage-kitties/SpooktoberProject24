@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/JessieHouseScene.unity
     guid: 55b4f00d5d9225447b5bf2f1e211677f
   - enabled: 1
-    path: Assets/Scenes/BoutiqueScene.unity
+    path: Assets/Scenes/VFXBoutiqueScene.unity
     guid: eb5be6061e5058a4a90478830093091b
   - enabled: 1
     path: Assets/Scenes/CabinScene.unity

@@ -10,6 +10,8 @@ namespace MainMenu.Functionality
         [SerializeField] private GameObject panelExitGame;
         [SerializeField] private GameObject utilityMenu;
         [SerializeField] private GameObject utilityMenuHider;
+        [SerializeField] private GameObject vfxs;
+        [SerializeField] private GameObject vfxCamera;
         public string currentScene;
         public int currentSlot=0;
         string filename
@@ -19,6 +21,8 @@ namespace MainMenu.Functionality
         private void Awake()
         {
             DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(vfxs);
+            DontDestroyOnLoad(vfxCamera);
         }
 
         public void ExitGame()
