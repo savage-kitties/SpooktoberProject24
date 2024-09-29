@@ -15,6 +15,7 @@ public class GameCanvasManager : MonoBehaviour
     private MirellaCooperationMeasurement mirellaCooperationInstance;
     private SearchManager searchManagerInstance;
     private VariableManager variableManagerInstance;
+    private AnimationManager animationManagerInstance;
     
     void Start()
     {
@@ -23,6 +24,7 @@ public class GameCanvasManager : MonoBehaviour
         RegisterMirellaCooperationMeasurement();
         RegisterSearchManager();
         RegisterVariableManager();
+        RegisterAnimationManager();
         
     }
 
@@ -148,4 +150,27 @@ public class GameCanvasManager : MonoBehaviour
     }
 }
    
+   private void RegisterAnimationManager()
+    {
+        GameObject animationManagerObject = GameObject.Find("SpriteManager");
+
+        if (animationManagerObject != null)
+        {
+            animationManagerInstance = animationManagerObject.GetComponent<AnimationManager>();
+
+            if (animationManagerInstance != null)
+            {
+                // Register the SetTriggerAnimation function for Lua
+                Lua.RegisterFunction("SetCharacterAnimation", animationManagerInstance, typeof(AnimationManager).GetMethod("SetTriggerAnimation"));
+            }
+            else
+            {
+                Debug.LogError("AnimationManager component not found on AnimationManagerObject!");
+            }
+        }
+        else
+        {
+            Debug.LogError("AnimationManager GameObject not found!");
+        }
+    }
 }

@@ -18625,7 +18625,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(0, "EnterScene")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
