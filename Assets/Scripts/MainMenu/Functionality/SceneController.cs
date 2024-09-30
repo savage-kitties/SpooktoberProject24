@@ -140,6 +140,21 @@ namespace MainMenu.Functionality
             
         }
 
+        public bool GetSlotOccupancy(int slotNumber)
+        {
+            currentSlot = slotNumber;
+            if (ES3.KeyExists("Slot", filename))
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public string GetSlotSceneName(int slotNumber)
+        {
+            currentSlot = slotNumber;
+            return (ES3.Load<string>("CurrentScene", filename));
+        }
         public void SetUtilityMenuActive(bool active)
         {
             panelExitGame.SetActive(false);
