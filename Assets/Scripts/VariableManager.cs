@@ -1,5 +1,6 @@
-using System.Collections.Generic;
-using UnityEngine;
+ using System.Collections.Generic;
+ using PixelCrushers.DialogueSystem;
+ using UnityEngine;
 
 public class VariableManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class VariableManager : MonoBehaviour
 
     void Start()
     {
+        RegisterVariableManager();
         // Track all Interactions
         variableDictionary["MirellaInteraction"] = false;
         variableDictionary["GusInteraction"] = false;
@@ -80,5 +82,11 @@ public class VariableManager : MonoBehaviour
         }
         Debug.Log($"[VariableManager] CountClues called: {count} clues found with prefix '{cluePrefix}'");
         return count;
+    }
+    private void RegisterVariableManager()
+    {
+        Lua.RegisterFunction("GetBoolean", this, typeof(VariableManager).GetMethod("GetBoolean"));
+        Lua.RegisterFunction("SetBoolean", this, typeof(VariableManager).GetMethod("SetBoolean"));
+        Lua.RegisterFunction("CountClues", this, typeof(VariableManager).GetMethod("CountClues"));
     }
 }

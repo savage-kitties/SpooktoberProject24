@@ -5128,7 +5128,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Write")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5492,7 +5492,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Paper")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8037,7 +8037,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Flaping")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9532,8 +9532,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 234.99817, y: 659.6398}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 648.70636, y: 2542.2336}
+    canvasZoom: 0.7300003
   - id: 3
     fields:
     - title: Title
@@ -14711,8 +14711,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 172.60284, y: 0}
-    canvasZoom: 0.7299998
+    canvasScrollPosition: {x: 74.165665, y: 0}
+    canvasZoom: 0.6999998
   - id: 4
     fields:
     - title: Title
@@ -20345,8 +20345,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 27.967175, y: 19.002197}
-    canvasZoom: 0.85000026
+    canvasScrollPosition: {x: 157, y: 1602.0582}
+    canvasZoom: 1.0000002
   - id: 5
     fields:
     - title: Title
