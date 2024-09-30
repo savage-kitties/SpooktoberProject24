@@ -1458,7 +1458,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1.5625}
+    canvasScrollPosition: {x: 0, y: 409.3751}
     canvasZoom: 0.63999987
   - id: 2
     fields:
@@ -2296,7 +2296,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlayStepsFX("Running")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2369,9 +2369,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'PlayVFX("sparklesGus");
-
-        SetCharacterAnimation(1, "EnterScene");'
+      userScript: SetCharacterAnimation(1, "EnterScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2526,7 +2524,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayVFX("sparklesGus");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4070,7 +4068,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlayVFX("gus")
+      userScript: SpriteManager_ChangeSprite("Gus", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4297,7 +4295,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4622,7 +4620,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() == 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4693,7 +4691,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() >= 1
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4767,7 +4765,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() < 0
-      userScript: SetCharacterAnimation(1, "ExitScene");
+      userScript: 'SpriteManager_ChangeSprite("Gus", "0");
+
+        SetCharacterAnimation(1,
+        "ExitScene");
+
+        SetCharacterAnimation(1, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5125,7 +5128,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Write")
+      userScript: 'PlaySFX("Write");
+
+        SpriteManager_ChangeSprite("Gus", "1");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5196,7 +5201,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5647,7 +5652,7 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetGusCooperationLevel() <= 0 && GetBoolean("MirellaInteraction")
         == true
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5721,7 +5726,12 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetGusCooperationLevel() <= 0 && GetBoolean("MirellaInteraction")
         == false
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Gus", "0");
+
+        SetCharacterAnimation(1,
+        "ExitScene");
+
+        SetCharacterAnimation(1, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6154,7 +6164,9 @@ MonoBehaviour:
       userScript: 'ChangeGusCooperationLevel(-1);
 
         SetCharacterAnimation(1,
-        "ExitScene");'
+        "ExitScene");
+
+        SetCharacterAnimation(1, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6512,7 +6524,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(1, "ExitScene");
+      userScript: 'SetCharacterAnimation(1, "ExitScene");
+
+        SetCharacterAnimation(1,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6873,7 +6888,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7159,7 +7174,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7464,7 +7479,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: ChangeGusCooperationLevel(-1)
+      userScript: 'ChangeGusCooperationLevel(-1);
+
+        SpriteManager_ChangeSprite("Gus",
+        "0");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7537,7 +7555,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7609,7 +7627,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() < 0
-      userScript: SetCharacterAnimation(1, "ExitScene");
+      userScript: 'SetCharacterAnimation(1, "ExitScene");
+
+        SetCharacterAnimation(1,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7719,10 +7740,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'You shake your head. Even if he''s not the killer, no one can
-
-          doubt
-          what an opportunist he is.'
+        value: You shake your head. Even if he's not the killer, no one can doubt
+          what an opportunist he is.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -7762,7 +7781,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 835.04767
+        x: 836.41754
         y: 2450.1396
         width: 160
         height: 30
@@ -8108,7 +8127,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetBoolean("DuskClueF", true);
+      userScript: 'SetBoolean("DuskClueF", true);
+
+        SpriteManager_ChangeSprite("Gus",
+        "0");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8182,14 +8204,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 835.04767
-        y: 2721.1924
+        y: 2722.4119
         width: 160
         height: 30
     - id: 97
@@ -8254,7 +8276,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(1, "ExitScene");
+      userScript: 'SetCharacterAnimation(1, "ExitScene");
+
+        SetCharacterAnimation(1,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8646,7 +8671,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() == 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8718,7 +8743,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() < 0
-      userScript: 
+      userScript: 'SetCharacterAnimation(1, "ExitScene");
+
+        SetCharacterAnimation(1,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8860,7 +8888,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() > 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9074,7 +9102,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetBoolean("GusClueC", true);
+      userScript: 'SetBoolean("GusClueC", true);
+
+        SpriteManager_ChangeSprite("Gus",
+        "2");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9226,7 +9257,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: ChangeGusCooperationLevel(-1)
+      userScript: ChangeGusCooperationLevel(-1);
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9370,7 +9401,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9441,7 +9472,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9605,8 +9636,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.82000023
+    canvasScrollPosition: {x: 476.57758, y: 2132.0327}
+    canvasZoom: 0.7300004
   - id: 3
     fields:
     - title: Title
@@ -10734,7 +10765,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(2, "ExitScene");
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");
+
+        StopVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11104,7 +11140,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(3, "ExitScene");
+      userScript: 'SetCharacterAnimation(3, "ExitScene");
+
+        SetCharacterAnimation(3,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11321,7 +11360,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayVFX("jessie");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13865,7 +13904,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Jessie", "0");
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "0");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13936,7 +13980,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Jessie", "0");
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "0");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14796,8 +14845,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 20.73169, y: 0}
-    canvasZoom: 0.8199997
+    canvasScrollPosition: {x: 0, y: 415.8339}
+    canvasZoom: 0.75999975
   - id: 4
     fields:
     - title: Title
@@ -16517,7 +16566,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(0, "ExitScene");
+      userScript: 'SetCharacterAnimation(0, "ExitScene");
+
+        SetCharacterAnimation(0,
+        "BecomeIdle");
+
+        StopVFX("mirella");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16591,8 +16645,6 @@ MonoBehaviour:
         priority: 2
       conditionsString: 
       userScript: 'SetAllowedSearches();
-
-        StopVFX("mirella");
 
         PlayStepsFX("Backstore")'
       onExecute:
@@ -20306,7 +20358,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(0, "ExitScene");
+      userScript: 'SetCharacterAnimation(0, "ExitScene");
+
+        SetCharacterAnimation(0,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20447,7 +20502,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 613.49585}
+    canvasScrollPosition: {x: 0, y: 957.3326}
     canvasZoom: 0.7300004
   - id: 5
     fields:

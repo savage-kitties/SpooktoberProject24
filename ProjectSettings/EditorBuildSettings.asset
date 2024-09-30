@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DuskEndingScene.unity
     guid: ad0b84e8e60bc774392657b49d41be49
   - enabled: 1
-    path: Assets/Scenes/Boutique.unity
+    path: Assets/Scenes/BoutiqueScene.unity
     guid: f99e85d4bbdac424da6a10604e02674f
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 275950de0d089ce48995cbed5cd17ba6, type: 2}
