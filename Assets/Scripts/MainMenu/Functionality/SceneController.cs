@@ -47,6 +47,7 @@ namespace MainMenu.Functionality
             _fxManager.PlayStepsFX("Forest");
             _fxManager.PlayVFX("inicio");
             RegisterLoadMainMenu();
+            RegisterLoadEndingCredits();
         }
 
         public void ExitGame()
@@ -72,6 +73,19 @@ namespace MainMenu.Functionality
             Destroy(GameObject.Find("Dialogue Manager"));
             SetUtilityMenuActive(false);
             SceneManager.LoadScene("MainMenu");
+            
+            Destroy(vfxs);
+            Destroy(vfxCamera);
+            Destroy(gameCanvasUi);
+            Destroy(this.gameObject); 
+        
+        }
+
+        public void LoadEndingCredits()
+        {
+            Destroy(GameObject.Find("Dialogue Manager"));
+            SetUtilityMenuActive(false);
+            SceneManager.LoadScene("EndingCredits");
             
             Destroy(vfxs);
             Destroy(vfxCamera);
@@ -186,6 +200,11 @@ namespace MainMenu.Functionality
         private void RegisterLoadMainMenu()
         {
             Lua.RegisterFunction("LoadMainMenu", this, typeof(SceneController).GetMethod("LoadMainMenu"));
+        }
+
+        private void RegisterLoadEndingCredits()
+        {
+            Lua.RegisterFunction("LoadEndingCredits", this, typeof(SceneController).GetMethod("LoadEndingCredits"));
         }
 
         public void ReturnToIdle()
