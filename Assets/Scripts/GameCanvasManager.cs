@@ -162,6 +162,7 @@ public class GameCanvasManager : MonoBehaviour
             {
                 // Register the SetTriggerAnimation function for Lua
                 Lua.RegisterFunction("SetCharacterAnimation", animationManagerInstance, typeof(AnimationManager).GetMethod("SetTriggerAnimation"));
+                Debug.Log("AnimationManager is working!");
             }
             else
             {

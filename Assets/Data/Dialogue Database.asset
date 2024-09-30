@@ -1456,7 +1456,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 219.21964}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.8199997
   - id: 2
     fields:
@@ -9530,7 +9530,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 664.50885, y: 2536.1812}
+    canvasScrollPosition: {x: 454.38232, y: 1842.5085}
     canvasZoom: 0.79000026
   - id: 3
     fields:
@@ -9699,7 +9699,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Timeline(Play, GameCanvas/SpriteManager/Player);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 3
@@ -9724,7 +9724,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetBoolean("MirellaInteraction") == false and GetBoolean("GusInteraction")
         == false
-      userScript: 
+      userScript: 'PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10444,7 +10446,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "3");
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10586,7 +10588,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10657,7 +10659,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(2, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10735,7 +10737,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SpriteManager_ChangeSprite("Player", "2");
+      userScript: 'SetCharacterAnimation(3, "EnterScene");
 
         PlaySFX("Screech")'
       onExecute:
@@ -10956,7 +10958,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11009,7 +11011,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Fade(in, 5); SendMessage(ChangeBackground, 1, GameCanvas/Background);
+        value: 'Fade(in, 5); '
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 3
@@ -11027,7 +11029,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(3, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11082,7 +11084,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'Fade(in, 5); SendMessage(ChangeBackground, 0, GameCanvas/Background);
+        value: '
 
 '
         type: 0
@@ -11102,14 +11104,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "1");
+      userScript: SetCharacterAnimation(2, "EnterScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 268.03174
-        y: 1122.2424
+        x: 266.6619
+        y: 1120.8726
         width: 160
         height: 30
     - id: 23
@@ -11392,7 +11394,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Bite")
+      userScript: 'PlaySFX("Bite");
+
+        SpriteManager_ChangeSprite("Jessie",
+        "1");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11606,14 +11611,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Pet")
+      userScript: 'PlaySFX("Pet");
+
+        SpriteManager_ChangeSprite("Jessie",
+        "2");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 272.42734
-        y: 1442.0226
+        x: 273.64685
+        y: 1440.8031
         width: 160
         height: 30
     - id: 30
@@ -12041,7 +12049,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12183,7 +12191,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "0");
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12327,7 +12335,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetBoolean("MirellaInteraction") == true and GetBoolean("GusInteraction")
         == false
-      userScript: 
+      userScript: 'PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12619,7 +12629,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "3");
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13203,7 +13213,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "0");
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13780,7 +13790,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "1");
+      userScript: SpriteManager_ChangeSprite("Jessie", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13851,7 +13861,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "1");
+      userScript: SpriteManager_ChangeSprite("Jessie", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13989,14 +13999,16 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetBoolean("GusInteraction") == true and GetBoolean("MirellaInteraction")
         == false
-      userScript: 
+      userScript: 'PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 783.2875
-        y: 82.73973
+        y: 81.52022
         width: 160
         height: 30
     - id: 66
@@ -14062,7 +14074,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetBoolean("MirellaInteraction") == true and GetBoolean("GusInteraction")
         == true
-      userScript: 
+      userScript: 'PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14644,7 +14658,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: cont
+        value: You enter your home.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -14696,9 +14710,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'PlayVFX("plumas");
-
-        PlayVFX("jessie");'
+      userScript: SetCharacterAnimation(2, "EnterScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14709,8 +14721,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 172.60284, y: 0}
-    canvasZoom: 0.7299998
+    canvasScrollPosition: {x: 1.2195129, y: 1.2195129}
+    canvasZoom: 0.8199997
   - id: 4
     fields:
     - title: Title
