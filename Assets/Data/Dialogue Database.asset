@@ -1456,7 +1456,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 216.13159}
     canvasZoom: 0.8199997
   - id: 2
     fields:
@@ -1724,7 +1724,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'PlayAmbientFX("Cracking");
 
-        PlayVFX("sparklesGus")'
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1937,7 +1937,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetBoolean("GusInteraction", true);
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2356,7 +2356,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Timeline(Play, GameCanvas/SpriteManager/Gus);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 2
@@ -2374,7 +2374,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("sparklesGus");
+
+        SetCharacterAnimation(1, "EnterScene");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2821,7 +2823,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("sparklesGus");
+
+        SetCharacterAnimation(1, "EnterScene");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4768,7 +4772,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() < 0
-      userScript: 
+      userScript: SetCharacterAnimation(1, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6152,7 +6156,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: ChangeGusCooperationLevel(-1)
+      userScript: 'ChangeGusCooperationLevel(-1);
+
+        SetCharacterAnimation(1,
+        "ExitScene");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6510,7 +6517,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(1, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7607,7 +7614,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() < 0
-      userScript: 
+      userScript: SetCharacterAnimation(1, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7825,8 +7832,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1117.6188
-        y: 2398.824
+        x: 1116.1263
+        y: 2397.3315
         width: 160
         height: 30
     - id: 92
@@ -8252,7 +8259,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(1, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9530,8 +9537,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 454.38232, y: 1842.5085}
-    canvasZoom: 0.79000026
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.6700004
   - id: 3
     fields:
     - title: Title
@@ -20372,7 +20379,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 2494.3193}
+    canvasScrollPosition: {x: 0, y: 92.94647}
     canvasZoom: 0.7300004
   - id: 5
     fields:
