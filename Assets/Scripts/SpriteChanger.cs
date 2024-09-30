@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using PixelCrushers.DialogueSystem;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,6 +48,11 @@ public class SpriteChanger : MonoBehaviour
 
     public Actor[] actors; // Array to hold all actors
 
+    private void Start()
+    {
+        RegisterSpriteManager();
+    }
+
     public void ChangeSprite(string actorName, string index)
     {
         foreach (Actor actor in actors)
@@ -64,5 +72,9 @@ public class SpriteChanger : MonoBehaviour
             }
         }
         Debug.LogWarning("Actor not found: " + actorName);
+    }
+    private void RegisterSpriteManager()
+    {
+        Lua.RegisterFunction("SpriteManager_ChangeSprite", this, typeof(SpriteChanger).GetMethod("ChangeSprite"));
     }
 }

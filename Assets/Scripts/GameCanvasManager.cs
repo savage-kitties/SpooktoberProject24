@@ -10,44 +10,20 @@ The script registers custom scripts with Lua at start(), allowing us to change s
 
 public class GameCanvasManager : MonoBehaviour
 {
-    private SpriteChanger spriteChangerInstance;
     private GusCooperationMeasurement gusCooperationInstance;
     private MirellaCooperationMeasurement mirellaCooperationInstance;
     private SearchManager searchManagerInstance;
-    private AnimationManager animationManagerInstance;
     
     void Start()
     {
-        RegisterSpriteManager();
         RegisterGusCooperationMeasurement();
         RegisterMirellaCooperationMeasurement();
         RegisterSearchManager();
-        RegisterAnimationManager();
+
         
     }
 
-    private void RegisterSpriteManager()
-    {
-        GameObject spriteManagerObject = GameObject.Find("SpriteManager");
-
-        if (spriteManagerObject != null)
-        {
-            spriteChangerInstance = spriteManagerObject.GetComponent<SpriteChanger>();
-
-            if (spriteChangerInstance != null)
-            {
-                Lua.RegisterFunction("SpriteManager_ChangeSprite", spriteChangerInstance, typeof(SpriteChanger).GetMethod("ChangeSprite"));
-            }
-            else
-            {
-                Debug.LogError("SpriteChanger component not found on SpriteManager object!");
-            }
-        }
-        else
-        {
-            Debug.LogError("SpriteManager GameObject not found!");
-        }
-    }
+    
 
     private void RegisterGusCooperationMeasurement()
     {
@@ -124,28 +100,5 @@ public class GameCanvasManager : MonoBehaviour
 
    
    
-   private void RegisterAnimationManager()
-    {
-        GameObject animationManagerObject = GameObject.Find("SpriteManager");
-
-        if (animationManagerObject != null)
-        {
-            animationManagerInstance = animationManagerObject.GetComponent<AnimationManager>();
-
-            if (animationManagerInstance != null)
-            {
-                // Register the SetTriggerAnimation function for Lua
-                Lua.RegisterFunction("SetCharacterAnimation", animationManagerInstance, typeof(AnimationManager).GetMethod("SetTriggerAnimation"));
-                Debug.Log("AnimationManager is working!");
-            }
-            else
-            {
-                Debug.LogError("AnimationManager component not found on AnimationManagerObject!");
-            }
-        }
-        else
-        {
-            Debug.LogError("AnimationManager GameObject not found!");
-        }
-    }
+   
 }

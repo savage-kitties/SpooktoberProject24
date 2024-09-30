@@ -1,10 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
     public List<GameObject> characterGameObjects;
+
+    private void Start()
+    {
+        RegisterAnimationManager();
+    }
 
     public void SetTriggerAnimation(float characterIndex, string animationTrigger)
     {
@@ -23,5 +30,10 @@ public class AnimationManager : MonoBehaviour
                 Debug.LogWarning($"Animator not found on {characterGameObjects[index].name}");
             }
         }
+    }
+    
+    private void RegisterAnimationManager()
+    {
+        Lua.RegisterFunction("SetCharacterAnimation", this, typeof(AnimationManager).GetMethod("SetTriggerAnimation"));
     }
 }

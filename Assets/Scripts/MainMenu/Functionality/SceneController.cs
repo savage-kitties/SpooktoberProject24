@@ -15,9 +15,10 @@ namespace MainMenu.Functionality
         [SerializeField] private GameObject vfxs;
         [SerializeField] private GameObject vfxCamera;
         [SerializeField] private VariableManager variableManager;
+        [SerializeField] private  GameObject gameCanvasUi;
         public string currentScene;
         public int currentSlot=0;
-        private FXManager _fxManager;
+        private FXManager _fxManager; 
         string filename
         {
             get { return "SaveFile" + currentSlot + ".es3"; }
@@ -27,6 +28,7 @@ namespace MainMenu.Functionality
             DontDestroyOnLoad(this.gameObject);
             DontDestroyOnLoad(vfxs);
             DontDestroyOnLoad(vfxCamera);
+            DontDestroyOnLoad(gameCanvasUi);
         }
 
         private void Start()
