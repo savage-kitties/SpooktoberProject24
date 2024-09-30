@@ -1299,7 +1299,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Laughs")
+      userScript: 'PlayVFX("tomato");
+
+        PlaySFX("Laughs")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1376,8 +1378,6 @@ MonoBehaviour:
       userScript: 'PlaySFX("Splat");
 
         PlayStepsFX("Running");
-
-        PlayVFX("tomato");
 
         SetCharacterAnimation(2,
         "ExitScene");
@@ -1458,8 +1458,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 409.3751}
-    canvasZoom: 0.63999987
+    canvasScrollPosition: {x: 7.058777, y: 0}
+    canvasZoom: 0.84999967
   - id: 2
     fields:
     - title: Title
@@ -1718,6 +1718,8 @@ MonoBehaviour:
         priority: 2
       conditionsString: 
       userScript: 'PlayAmbientFX("Cracking");
+
+        PlayVFX("sparklesGus");
 
 '
       onExecute:
@@ -2816,7 +2818,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'PlayVFX("sparklesGus");
+      userScript: 'PlayVFX("gus");
 
         SetCharacterAnimation(1, "EnterScene");'
       onExecute:
@@ -9636,8 +9638,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 476.57758, y: 2132.0327}
-    canvasZoom: 0.7300004
+    canvasScrollPosition: {x: 119.96562, y: 234.68033}
+    canvasZoom: 1.2699999
   - id: 3
     fields:
     - title: Title
@@ -9830,9 +9832,7 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetBoolean("MirellaInteraction") == false and GetBoolean("GusInteraction")
         == false
-      userScript: 'PlayVFX("plumas");
-
-        PlayVFX("jessie");'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14849,7 +14849,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(2, "EnterScene");
+      userScript: 'SetCharacterAnimation(2, "EnterScene");
+
+        PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14860,8 +14864,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 254.23059, y: 0}
-    canvasZoom: 0.75999975
+    canvasScrollPosition: {x: 88.22606, y: 0}
+    canvasZoom: 1.4199991
   - id: 4
     fields:
     - title: Title
@@ -20517,8 +20521,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 957.3326}
-    canvasZoom: 0.7300004
+    canvasScrollPosition: {x: 10.868777, y: 958.6664}
+    canvasZoom: 0.76000035
   - id: 5
     fields:
     - title: Title
@@ -20703,7 +20707,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(2, "EnterScene");
+      userScript: 'SetCharacterAnimation(2, "EnterScene");
+
+        PlayVFX("rain");
+
+        PlayVFX("fountain");
+
+        PlayAmbientFX("Rain");
+
+        PlaySFX("Logs")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20993,7 +21005,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Murmurs")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -24698,8 +24710,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 322.35297, y: 456.47052}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 0, y: 365.6715}
+    canvasZoom: 0.6700003
   - id: 6
     fields:
     - title: Title
@@ -25610,8 +25622,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 35.98757, y: 26.315765}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 1.8273163, y: 0}
+    canvasZoom: 1.1199999
   - id: 7
     fields:
     - title: Title
@@ -26595,8 +26607,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 5.548935, y: 0}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 49.056747, y: 29.076765}
+    canvasZoom: 1.03
   - id: 8
     fields:
     - title: Title
@@ -28934,7 +28946,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.3400005
+    canvasZoom: 1.12
   syncInfo:
     syncActors: 0
     syncItems: 0
