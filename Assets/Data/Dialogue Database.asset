@@ -14271,7 +14271,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "3");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14342,7 +14347,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "3");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14413,7 +14423,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "3");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14845,7 +14860,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 415.8339}
+    canvasScrollPosition: {x: 254.23059, y: 0}
     canvasZoom: 0.75999975
   - id: 4
     fields:
@@ -20688,7 +20703,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(2, "EnterScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20765,7 +20780,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21354,7 +21369,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CountClues("GusClue") >= 1
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21425,7 +21440,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CountClues("MirellaClue") >= 1
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21496,7 +21511,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CountClues("DuskClue") >= 4
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21567,7 +21582,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22211,7 +22226,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22284,7 +22299,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23072,7 +23090,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23144,7 +23162,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23577,7 +23598,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23614,7 +23635,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: '(shouting)
+
+          I saw the blood on you!'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23792,7 +23815,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -24444,7 +24470,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -24593,7 +24619,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -24669,7 +24698,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 72.63146, y: 20.048143}
+    canvasScrollPosition: {x: 322.35297, y: 456.47052}
     canvasZoom: 0.85000014
   - id: 6
     fields:
