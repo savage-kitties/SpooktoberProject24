@@ -647,7 +647,9 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'PlaySFX("Police");
 
-        PlayVFX("jessie")'
+        SetCharacterAnimation(2, "EnterScene");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -755,10 +757,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'The body''s head floats and spins around the water''s surface,
-
-          while
-          what''s left of the torso lays on the floor.'
+        value: The body's head floats and spins around the water's surface, while
+          what's left of the torso lays on the floor.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -900,13 +900,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'The white flesh
-
-          is blueish, contrasting against the pink
-          ribs and red flesh that
-
-          remain as if they had been tossed and
-          torn viciously.'
+        value: The white flesh is blueish, contrasting against the pink ribs and
+          red flesh that remain as if they had been tossed and torn viciously.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1090,7 +1085,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1286,7 +1281,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SendMessage(ChangeBackground, 1, GameCanvas/ParallaxBackground)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -1360,7 +1355,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SendMessage(ChangeBackground, 2, GameCanvas/ParallaxBackground);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -1382,13 +1377,16 @@ MonoBehaviour:
 
         PlayStepsFX("Running");
 
-        PlayVFX("tomato")'
+        PlayVFX("tomato");
+
+        SetCharacterAnimation(2,
+        "ExitScene");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 154
+        x: 155.21951
         y: 679
         width: 160
         height: 30
@@ -1458,8 +1456,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 32.857117, y: 572.8573}
-    canvasZoom: 0.6999998
+    canvasScrollPosition: {x: 0, y: 216.13159}
+    canvasZoom: 0.8199997
   - id: 2
     fields:
     - title: Title
@@ -1726,7 +1724,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'PlayAmbientFX("Cracking");
 
-        PlayVFX("sparklesGus")'
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1939,7 +1937,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetBoolean("GusInteraction", true);
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2358,7 +2356,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Timeline(Play, GameCanvas/SpriteManager/Gus);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 2
@@ -2376,7 +2374,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("sparklesGus");
+
+        SetCharacterAnimation(1, "EnterScene");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2823,7 +2823,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("sparklesGus");
+
+        SetCharacterAnimation(1, "EnterScene");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4770,7 +4772,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() < 0
-      userScript: 
+      userScript: SetCharacterAnimation(1, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6154,7 +6156,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: ChangeGusCooperationLevel(-1)
+      userScript: 'ChangeGusCooperationLevel(-1);
+
+        SetCharacterAnimation(1,
+        "ExitScene");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6512,7 +6517,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(1, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7609,7 +7614,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() < 0
-      userScript: 
+      userScript: SetCharacterAnimation(1, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7827,8 +7832,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1117.6188
-        y: 2398.824
+        x: 1116.1263
+        y: 2397.3315
         width: 160
         height: 30
     - id: 92
@@ -8254,7 +8259,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(1, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9532,8 +9537,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 648.70636, y: 2542.2336}
-    canvasZoom: 0.7300003
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.6700004
   - id: 3
     fields:
     - title: Title
@@ -9701,7 +9706,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Timeline(Play, GameCanvas/SpriteManager/Player);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 3
@@ -9726,7 +9731,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetBoolean("MirellaInteraction") == false and GetBoolean("GusInteraction")
         == false
-      userScript: 
+      userScript: 'PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10446,7 +10453,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "3");
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10588,7 +10595,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10659,7 +10666,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(2, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10737,7 +10744,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SpriteManager_ChangeSprite("Player", "2");
+      userScript: 'SetCharacterAnimation(3, "EnterScene");
 
         PlaySFX("Screech")'
       onExecute:
@@ -10958,7 +10965,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11011,7 +11018,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Fade(in, 5); SendMessage(ChangeBackground, 1, GameCanvas/Background);
+        value: 'Fade(in, 5); '
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 3
@@ -11029,7 +11036,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(3, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11084,7 +11091,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'Fade(in, 5); SendMessage(ChangeBackground, 0, GameCanvas/Background);
+        value: '
 
 '
         type: 0
@@ -11104,14 +11111,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "1");
+      userScript: SetCharacterAnimation(2, "EnterScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 268.03174
-        y: 1122.2424
+        x: 266.6619
+        y: 1120.8726
         width: 160
         height: 30
     - id: 23
@@ -11394,7 +11401,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Bite")
+      userScript: 'PlaySFX("Bite");
+
+        SpriteManager_ChangeSprite("Jessie",
+        "1");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11608,14 +11618,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Pet")
+      userScript: 'PlaySFX("Pet");
+
+        SpriteManager_ChangeSprite("Jessie",
+        "2");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 272.42734
-        y: 1442.0226
+        x: 273.64685
+        y: 1440.8031
         width: 160
         height: 30
     - id: 30
@@ -12043,7 +12056,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12185,7 +12198,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "0");
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12329,7 +12342,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetBoolean("MirellaInteraction") == true and GetBoolean("GusInteraction")
         == false
-      userScript: 
+      userScript: 'PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12621,7 +12636,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "3");
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13205,7 +13220,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "0");
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13782,7 +13797,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "1");
+      userScript: SpriteManager_ChangeSprite("Jessie", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13853,7 +13868,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Player", "1");
+      userScript: SpriteManager_ChangeSprite("Jessie", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13991,14 +14006,16 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetBoolean("GusInteraction") == true and GetBoolean("MirellaInteraction")
         == false
-      userScript: 
+      userScript: 'PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 783.2875
-        y: 82.73973
+        y: 81.52022
         width: 160
         height: 30
     - id: 66
@@ -14064,7 +14081,9 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetBoolean("MirellaInteraction") == true and GetBoolean("GusInteraction")
         == true
-      userScript: 
+      userScript: 'PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14646,7 +14665,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: cont
+        value: You enter your home.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -14698,9 +14717,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'PlayVFX("plumas");
-
-        PlayVFX("jessie");'
+      userScript: SetCharacterAnimation(2, "EnterScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14711,8 +14728,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 74.165665, y: 0}
-    canvasZoom: 0.6999998
+    canvasScrollPosition: {x: 3.6585083, y: 23.170746}
+    canvasZoom: 0.8199997
   - id: 4
     fields:
     - title: Title
@@ -15331,7 +15348,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Mirella", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15384,7 +15401,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Timeline(Play, GameCanvas/SpriteManager/Mirella);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -15402,7 +15419,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(0, "EnterScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15551,7 +15568,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: ChangeMirellaCooperationLevel(-1)
+      userScript: 'ChangeMirellaCooperationLevel(-1);
+
+        SpriteManager_ChangeSprite("Mirella",
+        "0");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15622,7 +15642,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: ChangeMirellaCooperationLevel(1)
+      userScript: 'ChangeMirellaCooperationLevel(1);
+
+        SpriteManager_ChangeSprite("Mirella",
+        "1");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15842,7 +15865,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: ChangeMirellaCooperationLevel(1)
+      userScript: 'ChangeMirellaCooperationLevel(1);
+
+        SpriteManager_ChangeSprite("Mirella",
+        "3");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16280,7 +16306,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Mirella", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16423,7 +16449,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(0, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17107,7 +17133,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: HasSearchesLeft() == false
-      userScript: PlayVFX("mirella")
+      userScript: 'SetCharacterAnimation(0, "EnterScene");
+
+        PlayVFX("mirella");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18802,7 +18830,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Mirella", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19033,7 +19061,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetMirellaCooperationLevel() < 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Mirella", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19104,7 +19132,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetMirellaCooperationLevel() > 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Mirella", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19175,7 +19203,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetMirellaCooperationLevel() == 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Mirella", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19246,7 +19274,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetMirellaCooperationLevel() < 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Mirella", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19549,7 +19577,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetBoolean("DuskClueB", true);
+      userScript: 'SetBoolean("DuskClueB", true);
+
+        SpriteManager_ChangeSprite("Mirella",
+        "2");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19840,7 +19871,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetMirellaCooperationLevel() < 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Mirella", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19914,7 +19945,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetMirellaCooperationLevel() >= 0
-      userScript: SetBoolean("DuskClueG", true);
+      userScript: 'SetBoolean("DuskClueG", true);
+
+        SpriteManager_ChangeSprite("Mirella",
+        "3");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20058,7 +20092,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Mirella", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20204,7 +20238,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCharacterAnimation(0, "ExitScene");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20345,8 +20379,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 157, y: 1602.0582}
-    canvasZoom: 1.0000002
+    canvasScrollPosition: {x: 0, y: 92.94647}
+    canvasZoom: 0.7300004
   - id: 5
     fields:
     - title: Title
