@@ -10734,7 +10734,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(2, "ExitScene");
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");
+
+        StopVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11104,7 +11109,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(3, "ExitScene");
+      userScript: 'SetCharacterAnimation(3, "ExitScene");
+
+        SetCharacterAnimation(3,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11321,7 +11329,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayVFX("jessie");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13865,7 +13873,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Jessie", "0");
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "0");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13936,7 +13949,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Jessie", "0");
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "0");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14796,8 +14814,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 20.73169, y: 0}
-    canvasZoom: 0.8199997
+    canvasScrollPosition: {x: 0, y: 692.1498}
+    canvasZoom: 0.75999975
   - id: 4
     fields:
     - title: Title
