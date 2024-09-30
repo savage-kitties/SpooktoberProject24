@@ -1,5 +1,6 @@
 using System;
 using FXManagement;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,10 +34,18 @@ namespace MainMenu.Functionality
 
         private void Start()
         {
+            SetUtilityMenuActive(false);
+            _fxManager = GetComponent<FXManager>();
+            _fxManager.StopVFX("all");
+            _fxManager.StopAmbientFX();
+            _fxManager.StopImpactFX();
+            _fxManager.StopSFX(); 
+            _fxManager.StopStepsFX();
             _fxManager = GetComponent<FXManager>();
             _fxManager.PlayAmbientFX("Leaves");
             _fxManager.PlayStepsFX("Forest");
             _fxManager.PlayVFX("inicio");
+            RegisterLoadMainMenu();
         }
 
         public void ExitGame()
@@ -62,6 +71,15 @@ namespace MainMenu.Functionality
             Destroy(GameObject.Find("Dialogue Manager"));
             SetUtilityMenuActive(false);
             SceneManager.LoadScene("MainMenu");
+            _fxManager.StopVFX("all");
+            _fxManager.StopAmbientFX();
+            _fxManager.StopImpactFX();
+            _fxManager.StopSFX(); 
+            _fxManager.StopStepsFX();
+            _fxManager = GetComponent<FXManager>();
+            _fxManager.PlayAmbientFX("Leaves");
+            _fxManager.PlayStepsFX("Forest");
+            _fxManager.PlayVFX("inicio");
         
         }
 
@@ -163,6 +181,9 @@ namespace MainMenu.Functionality
             pnlUtilityMenu.SetActive(active);
             
         }
-        
+        private void RegisterLoadMainMenu()
+        {
+            Lua.RegisterFunction("LoadMainMenu", this, typeof(SceneController).GetMethod("LoadMainMenu"));
+        }
     }
 }
