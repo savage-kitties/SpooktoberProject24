@@ -1529,7 +1529,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 246.83557}
     canvasZoom: 0.7899997
   - id: 2
     fields:
@@ -27395,7 +27395,16 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Closing")
+      userScript: 'PlaySFX("Closing");
+
+        SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");
+
+        StopVFX("plumas");
+
+        StopVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27469,7 +27478,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Dusk", "1");
+
+        SetCharacterAnimation(3,
+        "EnterScene");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27546,14 +27558,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetCharacterAnimation(2, "ExitScene");
-
-        SetCharacterAnimation(2,
-        "BecomeIdle");
-
-        StopVFX("plumas");
-
-        StopVFX("jessie");'
+      userScript: SpriteManager_ChangeSprite("Dusk", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27767,7 +27772,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(3, "ExitScene");
+
+        SetCharacterAnimation(3,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27821,7 +27829,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SendMessage(ChangeBackground, 1, GameCanvas/ParallaxBackground);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 8
@@ -28558,7 +28566,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("dusk1");
+
+        PlayVFX("dusk2");
+
+        PlayVFX("dusk3");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28613,7 +28625,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SendMessage(ChangeBackground, 1, GameCanvas/Background);
+        value: SendMessage(ChangeBackground, 2, GameCanvas/ParallaxBackground)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 8
@@ -28631,7 +28643,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX( "Laugh")
+      userScript: PlaySFX( "Laugh");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28778,8 +28790,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 5.970154, y: 676.11926}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 0, y: 414.2856}
+    canvasZoom: 0.7000003
   - id: 9
     fields:
     - title: Title
