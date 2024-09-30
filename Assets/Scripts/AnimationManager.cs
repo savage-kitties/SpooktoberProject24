@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using PixelCrushers.DialogueSystem;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
@@ -31,7 +32,25 @@ public class AnimationManager : MonoBehaviour
             }
         }
     }
-    
+
+    public void ReturnToIdle()
+    {
+        foreach(GameObject character in characterGameObjects)
+        {
+            Animator animator = character.GetComponent<Animator>();
+
+            if (animator != null)
+            {
+                animator.SetTrigger("ExitScene");
+                animator.SetTrigger("BecomeIdle");
+            }
+            else
+            {
+                Debug.LogWarning($"Animator not found on {character.name}");
+            }
+        }
+
+    }
     private void RegisterAnimationManager()
     {
         Lua.RegisterFunction("SetCharacterAnimation", this, typeof(AnimationManager).GetMethod("SetTriggerAnimation"));

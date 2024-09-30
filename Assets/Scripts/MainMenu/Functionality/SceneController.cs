@@ -17,6 +17,7 @@ namespace MainMenu.Functionality
         [SerializeField] private GameObject vfxCamera;
         [SerializeField] private VariableManager variableManager;
         [SerializeField] private  GameObject gameCanvasUi;
+        [SerializeField] private AnimationManager animationManager;
         public string currentScene;
         public int currentSlot=0;
         private FXManager _fxManager; 
@@ -75,7 +76,7 @@ namespace MainMenu.Functionality
             Destroy(vfxs);
             Destroy(vfxCamera);
             Destroy(gameCanvasUi);
-            Destroy(this.gameObject);
+            Destroy(this.gameObject); 
         
         }
 
@@ -185,6 +186,11 @@ namespace MainMenu.Functionality
         private void RegisterLoadMainMenu()
         {
             Lua.RegisterFunction("LoadMainMenu", this, typeof(SceneController).GetMethod("LoadMainMenu"));
+        }
+
+        public void ReturnToIdle()
+        {
+            animationManager.ReturnToIdle();
         }
     }
 }

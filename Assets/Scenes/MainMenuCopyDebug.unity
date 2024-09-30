@@ -14162,7 +14162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pnlUtilityMenu: {fileID: 515302567}
-  firstSceneName: MirellaEndingScene
+  firstSceneName: DuskEndingScene
   panelExitGame: {fileID: 881222638}
   utilityMenu: {fileID: 643999321}
   utilityMenuHider: {fileID: 288127846}
@@ -14170,6 +14170,7 @@ MonoBehaviour:
   vfxCamera: {fileID: 1796857884}
   variableManager: {fileID: 1773098473}
   gameCanvasUi: {fileID: 1707326900}
+  animationManager: {fileID: 0}
   currentScene: 
   currentSlot: 0
 --- !u!114 &1655424227

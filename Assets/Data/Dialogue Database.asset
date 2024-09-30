@@ -1389,7 +1389,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 155.21951
-        y: 679
+        y: 677.96906
         width: 160
         height: 30
     - id: 15
@@ -9640,8 +9640,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 7.9177704, y: 0}
-    canvasZoom: 1.2399999
+    canvasScrollPosition: {x: 17, y: 1189.9999}
+    canvasZoom: 1.0000001
   - id: 3
     fields:
     - title: Title
@@ -14866,8 +14866,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 88.22606, y: 0}
-    canvasZoom: 1.4199991
+    canvasScrollPosition: {x: 1.4388733, y: 0}
+    canvasZoom: 1.3899992
   - id: 4
     fields:
     - title: Title
@@ -20523,8 +20523,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 828.584}
-    canvasZoom: 0.6100005
+    canvasScrollPosition: {x: 0, y: 2034.2256}
+    canvasZoom: 0.9400002
   - id: 5
     fields:
     - title: Title
@@ -24713,12 +24713,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 420
+        x: 418.8636
         y: 1055
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 393.18176}
+    canvasScrollPosition: {x: 0, y: 571.5906}
     canvasZoom: 0.8800001
   - id: 6
     fields:
@@ -25638,7 +25638,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 19.231453, y: 270.71793}
+    canvasScrollPosition: {x: 0.82647705, y: 0}
     canvasZoom: 1.2099998
   - id: 7
     fields:
@@ -26631,8 +26631,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 89.351166, y: 456.68924}
-    canvasZoom: 1.4799995
+    canvasScrollPosition: {x: 22.340393, y: 0}
+    canvasZoom: 0.94000006
   - id: 8
     fields:
     - title: Title
@@ -26734,7 +26734,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 8
@@ -26816,7 +26816,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "EnterScene");
+
+        PlayVFX("plumas");
+
+        PlayVFX("jessie");
+
+        PlayAmbientFX("Wind")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26959,7 +26965,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Closing")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27110,7 +27116,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");
+
+        StopVFX("plumas");
+
+        StopVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27538,7 +27551,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX( "Laugh")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27690,7 +27703,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 155
-        y: 643
+        y: 642.2308
         width: 160
         height: 30
     - id: 14
@@ -28170,7 +28183,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SendMessage(ChangeBackground, 2, GameCanvas/ParallaxBackground);
+        value: SendMessage(ChangeBackground, 1, GameCanvas/Background);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 8
@@ -28188,7 +28201,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX( "Laugh")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28324,7 +28337,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: LoadMainMenu()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28335,8 +28348,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 65.50684, y: 668.28766}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 473.4596}
+    canvasZoom: 0.97
   - id: 9
     fields:
     - title: Title
