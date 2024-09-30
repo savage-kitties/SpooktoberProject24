@@ -1299,7 +1299,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Laughs")
+      userScript: 'PlayVFX("tomato");
+
+        PlaySFX("Laughs")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1377,8 +1379,6 @@ MonoBehaviour:
 
         PlayStepsFX("Running");
 
-        PlayVFX("tomato");
-
         SetCharacterAnimation(2,
         "ExitScene");
 
@@ -1389,7 +1389,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 155.21951
-        y: 679
+        y: 677.96906
         width: 160
         height: 30
     - id: 15
@@ -1458,8 +1458,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1.5625}
-    canvasZoom: 0.63999987
+    canvasScrollPosition: {x: 0, y: 349.51962}
+    canvasZoom: 0.96999955
   - id: 2
     fields:
     - title: Title
@@ -1718,6 +1718,8 @@ MonoBehaviour:
         priority: 2
       conditionsString: 
       userScript: 'PlayAmbientFX("Cracking");
+
+        PlayVFX("sparklesGus");
 
 '
       onExecute:
@@ -2296,7 +2298,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlayStepsFX("Running")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2369,9 +2371,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'PlayVFX("sparklesGus");
+      userScript: 'SetCharacterAnimation(1, "EnterScene");
 
-        SetCharacterAnimation(1, "EnterScene");'
+        PlayVFX("gus");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2526,7 +2528,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayVFX("sparklesGus");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2818,7 +2820,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'PlayVFX("sparklesGus");
+      userScript: 'PlayVFX("gus");
 
         SetCharacterAnimation(1, "EnterScene");'
       onExecute:
@@ -4070,7 +4072,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlayVFX("gus")
+      userScript: SpriteManager_ChangeSprite("Gus", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4297,7 +4299,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4622,7 +4624,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() == 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4693,7 +4695,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() >= 1
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4767,7 +4769,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() < 0
-      userScript: SetCharacterAnimation(1, "ExitScene");
+      userScript: 'SpriteManager_ChangeSprite("Gus", "0");
+
+        SetCharacterAnimation(1,
+        "ExitScene");
+
+        SetCharacterAnimation(1, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5125,7 +5132,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: PlaySFX("Write")
+      userScript: 'PlaySFX("Write");
+
+        SpriteManager_ChangeSprite("Gus", "1");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5196,7 +5205,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "2");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5647,7 +5656,7 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetGusCooperationLevel() <= 0 && GetBoolean("MirellaInteraction")
         == true
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5721,7 +5730,12 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetGusCooperationLevel() <= 0 && GetBoolean("MirellaInteraction")
         == false
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Gus", "0");
+
+        SetCharacterAnimation(1,
+        "ExitScene");
+
+        SetCharacterAnimation(1, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6154,7 +6168,9 @@ MonoBehaviour:
       userScript: 'ChangeGusCooperationLevel(-1);
 
         SetCharacterAnimation(1,
-        "ExitScene");'
+        "ExitScene");
+
+        SetCharacterAnimation(1, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6512,7 +6528,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(1, "ExitScene");
+      userScript: 'SetCharacterAnimation(1, "ExitScene");
+
+        SetCharacterAnimation(1,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6873,7 +6892,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7159,7 +7178,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7464,7 +7483,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: ChangeGusCooperationLevel(-1)
+      userScript: 'ChangeGusCooperationLevel(-1);
+
+        SpriteManager_ChangeSprite("Gus",
+        "0");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7537,7 +7559,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7609,7 +7631,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() < 0
-      userScript: SetCharacterAnimation(1, "ExitScene");
+      userScript: 'SetCharacterAnimation(1, "ExitScene");
+
+        SetCharacterAnimation(1,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7719,10 +7744,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'You shake your head. Even if he''s not the killer, no one can
-
-          doubt
-          what an opportunist he is.'
+        value: You shake your head. Even if he's not the killer, no one can doubt
+          what an opportunist he is.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -7762,7 +7785,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 835.04767
+        x: 836.41754
         y: 2450.1396
         width: 160
         height: 30
@@ -8108,7 +8131,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetBoolean("DuskClueF", true);
+      userScript: 'SetBoolean("DuskClueF", true);
+
+        SpriteManager_ChangeSprite("Gus",
+        "0");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8182,14 +8208,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 835.04767
-        y: 2721.1924
+        y: 2722.4119
         width: 160
         height: 30
     - id: 97
@@ -8254,7 +8280,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(1, "ExitScene");
+      userScript: 'SetCharacterAnimation(1, "ExitScene");
+
+        SetCharacterAnimation(1,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8646,7 +8675,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() == 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8718,7 +8747,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() < 0
-      userScript: 
+      userScript: 'SetCharacterAnimation(1, "ExitScene");
+
+        SetCharacterAnimation(1,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8860,7 +8892,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: GetGusCooperationLevel() > 0
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9074,7 +9106,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetBoolean("GusClueC", true);
+      userScript: 'SetBoolean("GusClueC", true);
+
+        SpriteManager_ChangeSprite("Gus",
+        "2");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9226,7 +9261,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: ChangeGusCooperationLevel(-1)
+      userScript: ChangeGusCooperationLevel(-1);
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9370,7 +9405,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "0");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9441,7 +9476,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Gus", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9605,8 +9640,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.82000023
+    canvasScrollPosition: {x: 17, y: 1189.9999}
+    canvasZoom: 1.0000001
   - id: 3
     fields:
     - title: Title
@@ -9799,9 +9834,7 @@ MonoBehaviour:
         priority: 2
       conditionsString: GetBoolean("MirellaInteraction") == false and GetBoolean("GusInteraction")
         == false
-      userScript: 'PlayVFX("plumas");
-
-        PlayVFX("jessie");'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10734,7 +10767,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(2, "ExitScene");
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");
+
+        StopVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11104,7 +11142,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(3, "ExitScene");
+      userScript: 'SetCharacterAnimation(3, "ExitScene");
+
+        SetCharacterAnimation(3,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11321,7 +11362,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayVFX("jessie");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13865,7 +13906,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Jessie", "0");
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "0");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13936,7 +13982,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SpriteManager_ChangeSprite("Jessie", "0");
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "0");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14222,7 +14273,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "3");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14293,7 +14349,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "3");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14364,7 +14425,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "3");
+
+        SetCharacterAnimation(2,
+        "ExitScene");
+
+        SetCharacterAnimation(2, "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14785,7 +14851,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(2, "EnterScene");
+      userScript: 'SetCharacterAnimation(2, "EnterScene");
+
+        PlayVFX("plumas");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14796,8 +14866,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 20.73169, y: 0}
-    canvasZoom: 0.8199997
+    canvasScrollPosition: {x: 81.57898, y: 0}
+    canvasZoom: 0.75999975
   - id: 4
     fields:
     - title: Title
@@ -16517,7 +16587,12 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(0, "ExitScene");
+      userScript: 'SetCharacterAnimation(0, "ExitScene");
+
+        SetCharacterAnimation(0,
+        "BecomeIdle");
+
+        StopVFX("mirella");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16591,8 +16666,6 @@ MonoBehaviour:
         priority: 2
       conditionsString: 
       userScript: 'SetAllowedSearches();
-
-        StopVFX("mirella");
 
         PlayStepsFX("Backstore")'
       onExecute:
@@ -20306,7 +20379,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(0, "ExitScene");
+      userScript: 'SetCharacterAnimation(0, "ExitScene");
+
+        SetCharacterAnimation(0,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20442,13 +20518,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 421.71906
+        x: 423.3584
         y: 2549.6377
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 613.49585}
-    canvasZoom: 0.7300004
+    canvasScrollPosition: {x: 0, y: 2509.756}
+    canvasZoom: 0.9400002
   - id: 5
     fields:
     - title: Title
@@ -20633,7 +20709,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "EnterScene");
+
+        PlayVFX("rain");
+
+        PlayVFX("fountain");
+
+        PlayAmbientFX("Rain");
+
+        PlaySFX("Logs")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20710,7 +20794,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20923,7 +21007,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Murmurs")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21299,7 +21383,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CountClues("GusClue") >= 1
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21370,7 +21454,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CountClues("MirellaClue") >= 1
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21441,7 +21525,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: CountClues("DuskClue") >= 4
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21512,7 +21596,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22156,7 +22240,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "3");
+
+        PlaySFX("Murmurs")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22229,7 +22315,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22284,7 +22373,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: LoadLevel(GusEndingScene);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -22294,7 +22383,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 24
+        destinationConversationID: 5
+        destinationDialogueID: 57
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -23017,7 +23112,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "3");
+
+        PlaySFX("Murmurs")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23089,7 +23186,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23144,7 +23244,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: LoadLevel(MirellaEndingScene);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -23154,7 +23254,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 36
+        destinationConversationID: 5
+        destinationDialogueID: 58
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -23522,7 +23628,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "3");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23559,7 +23665,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: '(shouting)
+
+          I saw the blood on you!'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -23666,7 +23774,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Angry")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23737,7 +23845,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -23791,7 +23902,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: LoadLevel(JessieEndingScene);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -23801,7 +23912,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 45
+        destinationConversationID: 5
+        destinationDialogueID: 60
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -23810,7 +23927,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 870.828
-        y: 941.6779
+        y: 940.54156
         width: 160
         height: 30
     - id: 46
@@ -24389,7 +24506,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SpriteManager_ChangeSprite("Jessie", "2");
+
+        PlaySFX("Murmurs")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -24538,7 +24657,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -24591,6 +24713,207 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 56
+        destinationConversationID: 5
+        destinationDialogueID: 59
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 418.8636
+        y: 1055
+        width: 160
+        height: 30
+    - id: 57
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: LoadLevel(GusEndingScene);
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 64
+        y: 1107
+        width: 160
+        height: 30
+    - id: 58
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: LoadLevel(MirellaEndingScene);
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 243
+        y: 1157
+        width: 160
+        height: 30
+    - id: 59
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
         value: LoadLevel(DuskEndingScene);
         type: 0
         typeString: CustomFieldType_Text
@@ -24609,13 +24932,78 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 420
-        y: 1055
+        x: 418.8636
+        y: 1105
+        width: 160
+        height: 30
+    - id: 60
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: LoadLevel(JessieEndingScene);
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 870.828
+        y: 991.6779
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 72.63146, y: 20.048143}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 44.318176, y: 455.68304}
+    canvasZoom: 0.8800001
   - id: 6
     fields:
     - title: Title
@@ -24801,7 +25189,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("rain");
+
+        PlayVFX("fountain");
+
+        PlayVFX("fireParent");
+
+        PlayAmbientFX("Rain");
+
+        PlaySFX("Burning")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -24945,7 +25341,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Gasoline")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25089,7 +25485,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Angry")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25160,7 +25556,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Burning")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25235,7 +25631,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Unpleasent")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25513,7 +25909,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 11
+        destinationConversationID: 6
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -25525,9 +25927,74 @@ MonoBehaviour:
         y: 580
         width: 160
         height: 30
+    - id: 12
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: LoadMainMenu();
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 160
+        y: 630
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 35.98757, y: 26.315765}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.85000014
   - id: 7
     fields:
     - title: Title
@@ -25713,7 +26180,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("rain");
+
+        PlayVFX("fountain");
+
+        PlayVFX("fireParent");
+
+        PlayAmbientFX("Rain");
+
+        PlaySFX("Burning")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25786,7 +26261,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetCharacterAnimation(0, "EnterScene")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25857,14 +26332,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Gasoline")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 180
+        y: 179.17355
         width: 160
         height: 30
     - id: 4
@@ -25930,7 +26405,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Angry")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26074,7 +26549,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Burning")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26149,7 +26624,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Unpleasent")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26498,7 +26973,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 12
+        destinationConversationID: 7
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -26510,9 +26991,74 @@ MonoBehaviour:
         y: 630
         width: 160
         height: 30
+    - id: 13
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: LoadMainMenu();
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 160
+        y: 680
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 5.548935, y: 0}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 21.27655, y: 218.08511}
+    canvasZoom: 0.94000006
   - id: 8
     fields:
     - title: Title
@@ -26614,7 +27160,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 8
@@ -26696,7 +27242,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "EnterScene");
+
+        PlayVFX("plumas");
+
+        PlayVFX("jessie");
+
+        PlayAmbientFX("Wind")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26839,7 +27391,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Closing")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -26990,7 +27542,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SetCharacterAnimation(2, "ExitScene");
+
+        SetCharacterAnimation(2,
+        "BecomeIdle");
+
+        StopVFX("plumas");
+
+        StopVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27418,7 +27977,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX( "Laugh")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27570,7 +28129,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 155
-        y: 643
+        y: 642.2308
         width: 160
         height: 30
     - id: 14
@@ -28050,7 +28609,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SendMessage(ChangeBackground, 1, GameCanvas/Background);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 8
@@ -28068,7 +28627,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX( "Laugh")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28131,7 +28690,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 21
+        destinationConversationID: 8
+        destinationDialogueID: 22
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -28143,9 +28708,74 @@ MonoBehaviour:
         y: 1043
         width: 160
         height: 30
+    - id: 22
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: LoadMainMenu()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 155
+        y: 1093
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 0, y: 797.74817}
+    canvasZoom: 0.94000006
   - id: 9
     fields:
     - title: Title
@@ -28247,7 +28877,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 9
@@ -28337,14 +28967,22 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayVFX("rain");
+
+        PlayVFX("fountain");
+
+        PlayVFX("fireParent");
+
+        PlayAmbientFX("Rain");
+
+        PlaySFX("Burning")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 80
+        y: 79.10715
         width: 160
         height: 30
     - id: 2
@@ -28551,7 +29189,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Gasoline")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28623,14 +29261,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Angry")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 159
-        y: 272
+        y: 271.17355
         width: 160
         height: 30
     - id: 6
@@ -28698,7 +29336,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Burning")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28771,7 +29409,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlaySFX("Unpleasent")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28836,7 +29474,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 8
+        destinationConversationID: 9
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -28845,12 +29489,77 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 159
-        y: 422
+        y: 421.08258
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: LoadMainMenu();
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 159
+        y: 471.08258
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.3400005
+    canvasZoom: 0.7000004
   syncInfo:
     syncActors: 0
     syncItems: 0
