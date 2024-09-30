@@ -647,7 +647,9 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'PlaySFX("Police");
 
-        PlayVFX("jessie")'
+        SetCharacterAnimation(2, "EnterScene");
+
+        PlayVFX("jessie");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -755,10 +757,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'The body''s head floats and spins around the water''s surface,
-
-          while
-          what''s left of the torso lays on the floor.'
+        value: The body's head floats and spins around the water's surface, while
+          what's left of the torso lays on the floor.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -900,13 +900,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'The white flesh
-
-          is blueish, contrasting against the pink
-          ribs and red flesh that
-
-          remain as if they had been tossed and
-          torn viciously.'
+        value: The white flesh is blueish, contrasting against the pink ribs and
+          red flesh that remain as if they had been tossed and torn viciously.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1090,7 +1085,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SpriteManager_ChangeSprite("Jessie", "1");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1286,7 +1281,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SendMessage(ChangeBackground, 1, GameCanvas/ParallaxBackground)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -1360,7 +1355,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SendMessage(ChangeBackground, 2, GameCanvas/ParallaxBackground);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -1382,13 +1377,16 @@ MonoBehaviour:
 
         PlayStepsFX("Running");
 
-        PlayVFX("tomato")'
+        PlayVFX("tomato");
+
+        SetCharacterAnimation(2,
+        "ExitScene");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 154
+        x: 155.21951
         y: 679
         width: 160
         height: 30
@@ -1458,8 +1456,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 32.857117, y: 572.8573}
-    canvasZoom: 0.6999998
+    canvasScrollPosition: {x: 0, y: 219.21964}
+    canvasZoom: 0.8199997
   - id: 2
     fields:
     - title: Title
