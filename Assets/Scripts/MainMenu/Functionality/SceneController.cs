@@ -71,15 +71,11 @@ namespace MainMenu.Functionality
             Destroy(GameObject.Find("Dialogue Manager"));
             SetUtilityMenuActive(false);
             SceneManager.LoadScene("MainMenu");
-            _fxManager.StopVFX("all");
-            _fxManager.StopAmbientFX();
-            _fxManager.StopImpactFX();
-            _fxManager.StopSFX(); 
-            _fxManager.StopStepsFX();
-            _fxManager = GetComponent<FXManager>();
-            _fxManager.PlayAmbientFX("Leaves");
-            _fxManager.PlayStepsFX("Forest");
-            _fxManager.PlayVFX("inicio");
+            
+            Destroy(vfxs);
+            Destroy(vfxCamera);
+            Destroy(gameCanvasUi);
+            Destroy(this.gameObject);
         
         }
 
@@ -156,6 +152,11 @@ namespace MainMenu.Functionality
             variableManager.SetBoolean("SearchedBoutiqueD",ES3.Load<bool>("SearchedBoutiqueD",filename));
             LoadNextScene(currentScene); 
             
+        }
+
+        public void LoadLastCheckpoint()
+        {
+            LoadSlot(currentSlot);
         }
 
         public bool GetSlotOccupancy(int slotNumber)
