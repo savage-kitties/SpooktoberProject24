@@ -73,11 +73,13 @@ namespace MainMenu.Functionality
             Destroy(GameObject.Find("Dialogue Manager"));
             SetUtilityMenuActive(false);
             SceneManager.LoadScene("MainMenu");
-            
-            Destroy(vfxs);
-            Destroy(vfxCamera);
-            Destroy(gameCanvasUi);
-            Destroy(this.gameObject); 
+            _fxManager.StopVFX("all");
+            _fxManager.StopAmbientFX();
+            _fxManager.StopImpactFX();
+            _fxManager.StopSFX(); 
+            _fxManager.StopStepsFX();
+            ReturnToIdle();
+               
         
         }
 
@@ -86,12 +88,12 @@ namespace MainMenu.Functionality
             Destroy(GameObject.Find("Dialogue Manager"));
             SetUtilityMenuActive(false);
             SceneManager.LoadScene("EndingCredits");
-            
-            Destroy(vfxs);
-            Destroy(vfxCamera);
-            Destroy(gameCanvasUi);
-            Destroy(this.gameObject); 
-        
+            _fxManager.StopVFX("all");
+            _fxManager.StopAmbientFX();
+            _fxManager.StopImpactFX();
+            _fxManager.StopSFX(); 
+            _fxManager.StopStepsFX();
+            ReturnToIdle(); 
         }
 
         public void SaveInCurrentSlot()
@@ -209,7 +211,7 @@ namespace MainMenu.Functionality
 
         public void ReturnToIdle()
         {
-            animationManager.ReturnToIdle();
+            animationManager.ResetToIdle();
         }
     }
 }

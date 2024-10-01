@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 302b3cd47a420b543880556a0284aeed
   - enabled: 1
+    path: Assets/Scenes/MainMenuFromGame.unity
+    guid: c6cd6bffe38611f42ac9a8276a11acd0
+  - enabled: 1
     path: Assets/Scenes/TownSquareDayScene.unity
     guid: 42a13ef426332ae4e83e8920c45e9108
   - enabled: 1

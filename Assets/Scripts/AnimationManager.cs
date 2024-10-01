@@ -51,6 +51,23 @@ public class AnimationManager : MonoBehaviour
         }
 
     }
+    public void ResetToIdle()
+    {
+        foreach(GameObject character in characterGameObjects)
+        {
+            Animator animator = character.GetComponent<Animator>();
+
+            if (animator != null)
+            {
+                animator.SetTrigger("Reset");
+            }
+            else
+            {
+                Debug.LogWarning($"Animator not found on {character.name}");
+            }
+        }
+
+    }
     private void RegisterAnimationManager()
     {
         Lua.RegisterFunction("SetCharacterAnimation", this, typeof(AnimationManager).GetMethod("SetTriggerAnimation"));
