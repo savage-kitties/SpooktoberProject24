@@ -27061,7 +27061,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1.0638428, y: 382.9787}
+    canvasScrollPosition: {x: 0, y: 198.93613}
     canvasZoom: 0.94000006
   - id: 8
     fields:
@@ -28570,7 +28570,11 @@ MonoBehaviour:
 
         PlayVFX("dusk2");
 
-        PlayVFX("dusk3");'
+        PlayVFX("dusk3");
+
+        PlayVFX("fog");
+
+        PlayVFX("DrippingBlood");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28790,8 +28794,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 414.2856}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 0, y: 394.4562}
+    canvasZoom: 0.6700003
   - id: 9
     fields:
     - title: Title
