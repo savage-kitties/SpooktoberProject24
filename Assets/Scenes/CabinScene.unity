@@ -896,8 +896,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1923784326}
   m_HandleRect: {fileID: 1923784327}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1871,8 +1871,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1433502532}
   m_HandleRect: {fileID: 1433502533}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3521,7 +3521,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bf75037d94bcd3e418e908edfd925cc5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
