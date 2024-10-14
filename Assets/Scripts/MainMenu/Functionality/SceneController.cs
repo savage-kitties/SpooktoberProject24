@@ -27,6 +27,14 @@ namespace MainMenu.Functionality
         }
         private void Awake()
         {
+            GameObject previous = GameObject.Find("CanvasSceneMngr");
+            if (previous != this.gameObject)
+            {
+                Destroy(vfxs);
+                Destroy(vfxCamera);
+                Destroy(gameCanvasUi);
+                Destroy(this.gameObject);
+            }
             DontDestroyOnLoad(this.gameObject);
             DontDestroyOnLoad(vfxs);
             DontDestroyOnLoad(vfxCamera);
@@ -79,7 +87,10 @@ namespace MainMenu.Functionality
             _fxManager.StopSFX(); 
             _fxManager.StopStepsFX();
             ReturnToIdle();
-               
+            SetUtilityMenuActive(false);
+            _fxManager.PlayAmbientFX("Leaves");
+            _fxManager.PlayStepsFX("Forest");
+            _fxManager.PlayVFX("inicio");
         
         }
 
@@ -94,6 +105,7 @@ namespace MainMenu.Functionality
             _fxManager.StopSFX(); 
             _fxManager.StopStepsFX();
             ReturnToIdle(); 
+            SetUtilityMenuActive(false);
         }
 
         public void SaveInCurrentSlot()

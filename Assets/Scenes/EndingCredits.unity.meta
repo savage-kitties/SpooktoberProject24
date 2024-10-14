@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: e5dfb6645f94b2c46b62279c492d57a8
+<<<<<<<< HEAD:Assets/Scenes/MainMenu_Mich.unity.meta
+guid: ea40fd3a5ad1feb46b4c4712a831a03b
+========
+guid: c721332452b7f4944b436a692266c287
+>>>>>>>> main:Assets/Dialogue System Examples/Timeline Continue Clip Example/Shoemaker Example - Auto Continue.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
