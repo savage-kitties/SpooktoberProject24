@@ -1,52 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
+using MoreMountains.Feedbacks;
+using PixelCrushers.DialogueSystem;
 
 public class CameraShake : MonoBehaviour
 {
-    public CinemachineVirtualCamera CinemachineVirtualCamera; // Set this in the Inspector
-    public float ShakeIntensity = 1f; // Intensity of the shake
-    public float ShakeTime = 0.2f; // Duration of the shake
-    private float Timer;
-    private CinemachineBasicMultiChannelPerlin _cbmcp;
+    [SerializeField] private MMPositionShaker shaker;
 
-    private void Start()
+    void Start()
     {
-        // Ensure Cinemachine camera is referenced correctly
-        if (CinemachineVirtualCamera != null)
+        // Search for the GameObject called "GameCanvas"
+        GameObject gameCanvas = GameObject.Find("GameCanvas");
+
+        // Check if the GameCanvas object exists and has the MMPositionShaker component
+        if (gameCanvas != null)
         {
-            _cbmcp = CinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        }
-        StopShake(); // Stop shake at start
-    }
+            shaker = gameCanvas.GetComponent<MMPositionShaker>();
 
-    // Method to trigger the camera shake, callable from Animation Events
-    public void ShakeCamera()
-    {
-        if (_cbmcp != null)
+            if (shaker != null)
+            {
+                Debug.Log("MMPositionShaker found on GameCanvas.");
+            }
+            else
+            {
+                Debug.LogWarning("MMPositionShaker component not found on GameCanvas.");
+            }
+        }
+        else
         {
-            _cbmcp.m_AmplitudeGain = ShakeIntensity;
-            Timer = ShakeTime;
-            StartCoroutine(StopShakeAfterTime());
-            Debug.Log("Cinemachine Virtual Camera found and Perlin noise component assigned.");
+            Debug.LogError("GameCanvas object not found in the scene");
         }
+
+        RegisterCameraShakeLuaFunction();
     }
 
-    // Coroutine to stop shake after a specified duration
-    private IEnumerator StopShakeAfterTime()
+    public void StartShaking()
     {
-        yield return new WaitForSeconds(Timer);
-        StopShake();
+        StartCoroutine(DelayedShake(1f)); // Delay of 1.5 seconds
     }
 
-    // Reset shake parameters
-    private void StopShake()
+    private IEnumerator DelayedShake(float delay)
     {
-        if (_cbmcp != null)
+        yield return new WaitForSeconds(delay);
+
+        if (shaker != null)
         {
-            _cbmcp.m_AmplitudeGain = 0f;
-            Timer = 0;
+            shaker.StartShaking();
+        }
+        else
+        {
+            Debug.LogWarning("Shaker not assigned");
         }
     }
+
+    private void RegisterCameraShakeLuaFunction()
+    {
+        Lua.RegisterFunction("ShakeCamera", this, typeof(CameraShake).GetMethod("StartShaking"));
+    }
+
 }
