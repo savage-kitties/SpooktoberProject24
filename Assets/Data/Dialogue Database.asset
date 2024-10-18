@@ -647,7 +647,9 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'PlaySFX("Police");
 
-        SetCharacterAnimation(2, "EnterScene");'
+        SetCharacterAnimation(2, "EnterScene");
+
+        ShakeCamera();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1529,7 +1531,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 246.83557}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.7899997
   - id: 2
     fields:
